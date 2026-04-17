@@ -12,4 +12,6 @@ public class RecipeResponseDTO {
     private String difficulty;
     private Integer prepTime;
     private Integer calories;
+    private String tags;
+    private String authorId;
 }

@@ -23,8 +23,8 @@ public class RecipeController {
     }
 
     @GetMapping("/suggest")
-    public List<RecipeSuggestionDTO> suggestRecipes(@RequestParam Long userId) {
-        return recipeService.suggestRecipesForUser(userId);
+    public List<RecipeSuggestionDTO> suggestRecipes(@RequestParam List<String> ingredients) {
+        return recipeService.suggestRecipesByIngredients(ingredients);
     }
 
     @PostMapping

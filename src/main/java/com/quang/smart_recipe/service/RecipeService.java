@@ -78,6 +78,68 @@ public class RecipeService {
         return suggestions;
     }
 
+    // THÊM HÀM NÀY VÀO RECIPE SERVICE
+    // Hàm gợi ý dựa trên danh sách String gửi lên từ web React
+    public List<RecipeSuggestionDTO> suggestRecipesByIngredients(List<String> inputIngredients) {
+        // 1. Chuyển tất cả chữ người dùng nhập về in thường để dễ so sánh
+        List<String> lowerCaseInputs = inputIngredients.stream()
+                .map(String::toLowerCase)
+                .collect(Collectors.toList());
+
+        List<Recipe> allRecipes = recipeRepository.findAll();
+        List<RecipeSuggestionDTO> suggestions = new ArrayList<>();
+
+        for (Recipe recipe : allRecipes) {
+            // Lấy danh sách nguyên liệu cần thiết của món ăn này
+            List<RecipeIngredient> requiredIngredients = recipeIngredientRepository.findByRecipeId(recipe.getId());
+
+            // BỎ QUA nếu món ăn này chưa được cập nhật nguyên liệu trong Database
+            if (requiredIngredients.isEmpty()) continue;
+
+            int matchCount = 0;
+            List<String> missingList = new ArrayList<>();
+
+            for (RecipeIngredient req : requiredIngredients) {
+                String requiredName = req.getIngredient().getName().toLowerCase();
+
+                // Kiểm tra xem nguyên liệu yêu cầu có nằm trong rổ người dùng nhập không
+                boolean hasIngredient = false;
+                for (String input : lowerCaseInputs) {
+                    if (requiredName.contains(input) || input.contains(requiredName)) {
+                        hasIngredient = true;
+                        break;
+                    }
+                }
+
+                if (hasIngredient) {
+                    matchCount++;
+                } else {
+                    missingList.add(req.getIngredient().getName()); // Lưu lại tên gốc để in ra cảnh báo thiếu đồ
+                }
+            }
+
+            int matchPercentage = (matchCount * 100) / requiredIngredients.size();
+
+            // Nếu khớp từ 1% trở lên thì đưa vào danh sách gợi ý
+            if (matchPercentage > 0) {
+                RecipeSuggestionDTO dto = new RecipeSuggestionDTO();
+                dto.setRecipeId(recipe.getId());
+                dto.setTitle(recipe.getTitle());
+                dto.setImageUrl(recipe.getImageUrl());
+                dto.setInstructions(recipe.getInstructions());
+                dto.setMatchPercentage(matchPercentage);
+                dto.setMissingIngredients(missingList);
+
+                suggestions.add(dto);
+            }
+        }
+
+        // 2. Sắp xếp danh sách: Món nào khớp % cao hơn thì đứng trước
+        suggestions.sort((a, b) -> Integer.compare(b.getMatchPercentage(), a.getMatchPercentage()));
+
+        return suggestions;
+    }
+
     public RecipeResponseDTO createRecipe(RecipeRequestDTO requestDTO) {
         Recipe recipe = recipeMapper.toEntity(requestDTO);
         Recipe savedRecipe = recipeRepository.save(recipe);

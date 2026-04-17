@@ -24,11 +24,19 @@ public class Recipe {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String instructions;
 
+    @Column(name = "difficulty")
     private String difficulty;
 
     private Integer prepTime;
 
+    @Column(name = "calories")
     private Integer calories;
 
     private String imageUrl;
+
+    @Column(name = "author_id")
+    private Long authorId;
+
+    @Column(name = "tags")
+    private String tags;
 }

@@ -13,6 +13,8 @@ public class RecipeRequestDTO {
     private Integer prepTime;
     private Integer calories;
     private String imageUrl;
+    private String tags;
+    private String authorId;
 
     @NotBlank(message = "Hướng dẫn không được để trống!")
     private String instructions;
