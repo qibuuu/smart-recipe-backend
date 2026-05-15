@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: smart-recipe
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/smart_recipe_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:123456}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:tquang2807@gmail.com}
+    password: ${MAIL_PASSWORD:ctpr dcin lyle ashz}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+# ── Application custom config ──────────────────────────────
+app:
+  base-url: ${APP_BASE_URL:http://localhost:8080}
+  admin-id: ${ADMIN_ID:1}
+  default-image: https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800
+
+  upload:
+    directory: ${UPLOAD_DIR:uploads}
+
+  google:
+    client-id: ${GOOGLE_CLIENT_ID:529966815271-7nftcsfra2rh37ee6ume06mkge3f9s5s.apps.googleusercontent.com}
+
+  jwt:
+    secret: ${JWT_SECRET:DayLaMotKhoaBiMatSieuCapVipProCuaTienQuangKhongTheBiHackerTimRaDuoc}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+

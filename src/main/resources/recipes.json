@@ -1,0 +1,835 @@
+[
+  {
+    "title": "Phở Bò Hà Nội",
+    "description": "Nước dùng trong, thơm quế hồi, bánh phở mềm và thịt bò thái mỏng.",
+    "instructions": "Bước 1: Chần xương bò rồi rửa sạch.\nBước 2: Ninh xương với hành tây, gừng nướng trong 3 giờ.\nBước 3: Rang quế, hồi, thảo quả rồi cho vào nồi nước dùng.\nBước 4: Trụng bánh phở, xếp thịt bò, chan nước dùng và thêm hành ngò.",
+    "difficulty": "Khó",
+    "prepTime": 240,
+    "calories": 520,
+    "imageUrl": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800",
+    "tags": "Món Nước,Truyền thống,Bò",
+    "ingredients": [
+      { "name": "Xương bò", "amount": 1000, "unit": "g" },
+      { "name": "Thịt bò", "amount": 300, "unit": "g" },
+      { "name": "Bánh phở", "amount": 500, "unit": "g" },
+      { "name": "Hành tây", "amount": 1, "unit": "củ" },
+      { "name": "Gừng", "amount": 1, "unit": "củ" }
+    ]
+  },
+  {
+    "title": "Phở Gà",
+    "description": "Phở gà thanh ngọt với thịt gà xé mềm và hành lá thơm.",
+    "instructions": "Bước 1: Luộc gà với gừng và hành tím.\nBước 2: Vớt gà ra để nguội rồi xé thịt.\nBước 3: Nêm lại nước luộc làm nước dùng.\nBước 4: Trụng bánh phở, xếp gà lên trên rồi chan nước.",
+    "difficulty": "Trung bình",
+    "prepTime": 90,
+    "calories": 430,
+    "imageUrl": "https://images.unsplash.com/photo-1555126634-323283e090fa?w=800",
+    "tags": "Món Nước,Gà,Truyền thống",
+    "ingredients": [
+      { "name": "Gà ta", "amount": 1, "unit": "con" },
+      { "name": "Bánh phở", "amount": 500, "unit": "g" },
+      { "name": "Hành lá", "amount": 50, "unit": "g" },
+      { "name": "Gừng", "amount": 1, "unit": "củ" },
+      { "name": "Hành tím", "amount": 3, "unit": "củ" }
+    ]
+  },
+  {
+    "title": "Bún Chả Hà Nội",
+    "description": "Thịt lợn nướng than hoa thơm lừng, ăn kèm bún, rau sống và nước mắm chua ngọt thanh mát.",
+    "instructions": "Bước 1: Thịt lợn thái mỏng, băm nhỏ, ướp với sả, hành tím, nước mắm, đường, tiêu.\nBước 2: Nặn chả viên và nướng than hoa cùng chả miếng đến khi vàng ươm.\nBước 3: Pha nước chấm chua ngọt với nước mắm, dấm, đường, tỏi ớt băm, thêm đu đủ cà rốt ngâm chua.\nBước 4: Bày bún, rau sống, chả và nước chấm ra thưởng thức.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 550,
+    "imageUrl": "https://images.unsplash.com/photo-1615486171448-4fdcb3cc51fa?w=800",
+    "tags": "Món Khô,Thịt Lợn,Truyền thống",
+    "ingredients": [
+      { "name": "Thịt ba chỉ", "amount": 500, "unit": "g" },
+      { "name": "Thịt nạc vai", "amount": 500, "unit": "g" },
+      { "name": "Bún tươi", "amount": 1000, "unit": "g" },
+      { "name": "Đu đủ xanh", "amount": 100, "unit": "g" },
+      { "name": "Rau sống các loại", "amount": 200, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bún Bò Huế",
+    "description": "Đậm đà hương vị mắm ruốc Huế, nước dùng cay nồng thơm mùi sả, ăn cùng thịt bò và chả cua.",
+    "instructions": "Bước 1: Hầm xương bò và giò heo với sả đập dập.\nBước 2: Nấu mắm ruốc với nước, lọc lấy phần nước trong cho vào nồi hầm.\nBước 3: Phi thơm hành củ, ớt bột, sả băm làm sa tế, đổ vào nồi nước dùng.\nBước 4: Thái mỏng thịt bò bắp, trụng bún, xếp giò heo, chả cua, thịt bò, chan nước dùng sôi.",
+    "difficulty": "Khó",
+    "prepTime": 180,
+    "calories": 600,
+    "imageUrl": "https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?w=800",
+    "tags": "Món Nước,Bò,Heo,Cay",
+    "ingredients": [
+      { "name": "Xương bò", "amount": 1000, "unit": "g" },
+      { "name": "Bắp bò", "amount": 500, "unit": "g" },
+      { "name": "Giò heo", "amount": 500, "unit": "g" },
+      { "name": "Sả", "amount": 5, "unit": "cây" },
+      { "name": "Mắm ruốc Huế", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Cơm Tấm Sườn Bì Chả",
+    "description": "Cơm tấm dẻo thơm, sườn nướng mật ong đậm đà, ăn kèm bì dai sần sật và chả trứng béo ngậy.",
+    "instructions": "Bước 1: Ướp sườn với mật ong, nước mắm, hành tỏi băm, dầu hào rồi nướng chín vàng.\nBước 2: Trộn thịt nạc dăm luộc thái chỉ với da heo luộc và thính gạo làm bì.\nBước 3: Trộn thịt băm, mộc nhĩ, miến, trứng gà, đem hấp chín làm chả.\nBước 4: Đơm cơm tấm, xếp sườn, bì, chả lên trên, rưới mỡ hành và dọn kèm nước mắm kẹo.",
+    "difficulty": "Trung bình",
+    "prepTime": 90,
+    "calories": 750,
+    "imageUrl": "https://images.unsplash.com/photo-1647413490714-0b6c23ce5ee3?w=800",
+    "tags": "Cơm,Thịt Heo,Đặc sản Miền Nam",
+    "ingredients": [
+      { "name": "Gạo tấm", "amount": 500, "unit": "g" },
+      { "name": "Sườn cốt lết", "amount": 500, "unit": "g" },
+      { "name": "Da heo (bì)", "amount": 200, "unit": "g" },
+      { "name": "Trứng gà", "amount": 4, "unit": "quả" },
+      { "name": "Thịt heo xay", "amount": 200, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Mì Quảng",
+    "description": "Sợi mì vàng ươm, nước lèo đậm đà vừa đủ thấm, tôm thịt rim rim và bánh tráng nướng giòn rụm.",
+    "instructions": "Bước 1: Thịt ba chỉ, tôm ướp gia vị, củ nén đập dập rồi xào săn.\nBước 2: Hầm xương heo lấy nước dùng, thêm màu hạt điều, nêm nếm đậm đà.\nBước 3: Chuẩn bị rau sống gồm bắp chuối, cải non, giá đỗ.\nBước 4: Xếp mì xắt, rau sống, múc tôm thịt, chan xăm xắp nước dùng, rắc đậu phộng rang và bẻ bánh tráng nướng lên.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 520,
+    "imageUrl": "https://images.unsplash.com/photo-1620025750316-0e1ceaa9681d?w=800",
+    "tags": "Món Nước,Miền Trung,Hải sản",
+    "ingredients": [
+      { "name": "Mì Quảng (vàng/trắng)", "amount": 500, "unit": "g" },
+      { "name": "Tôm đất", "amount": 200, "unit": "g" },
+      { "name": "Thịt ba chỉ", "amount": 200, "unit": "g" },
+      { "name": "Xương heo", "amount": 500, "unit": "g" },
+      { "name": "Đậu phộng rang", "amount": 100, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bánh Xèo Miền Tây",
+    "description": "Vỏ bánh mỏng giòn rụm, nhân tôm thịt giá đỗ ngọt lịm, cuốn cùng rau rừng và chấm nước mắm chua ngọt.",
+    "instructions": "Bước 1: Pha bột gạo với nước cốt dừa, bột nghệ, hành lá cắt nhỏ.\nBước 2: Xào xơ tôm, thịt ba chỉ và giá đỗ.\nBước 3: Tráng một lớp bột mỏng trên chảo nóng, cho nhân vào, đậy nắp 2 phút cho bánh giòn.\nBước 4: Gập đôi bánh lại, gắp ra đĩa ăn kèm rau sống và nước mắm.",
+    "difficulty": "Trung bình",
+    "prepTime": 45,
+    "calories": 450,
+    "imageUrl": "https://images.unsplash.com/photo-1625464161875-f5b9dce9b688?w=800",
+    "tags": "Bánh,Đồ Cuốn,Miền Tây",
+    "ingredients": [
+      { "name": "Bột bánh xèo", "amount": 400, "unit": "g" },
+      { "name": "Tôm sú", "amount": 300, "unit": "g" },
+      { "name": "Thịt ba chỉ", "amount": 200, "unit": "g" },
+      { "name": "Nước cốt dừa", "amount": 200, "unit": "ml" },
+      { "name": "Giá đỗ", "amount": 200, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Hủ Tiếu Nam Vang",
+    "description": "Nước dùng ngọt thanh từ xương ống và tôm khô, sợi hủ tiếu dai cùng thịt băm, tôm, trứng cút.",
+    "instructions": "Bước 1: Hầm xương ống heo, tôm khô, mực khô, củ cải trắng lấy nước ngọt.\nBước 2: Luộc tôm, gan heo, lòng heo, trứng cút.\nBước 3: Xào phi tỏi với thịt băm cho thơm.\nBước 4: Trụng hủ tiếu dai, xếp các loại topping lên, rưới thịt băm mỡ tỏi, chan nước dùng.",
+    "difficulty": "Trung bình",
+    "prepTime": 120,
+    "calories": 550,
+    "imageUrl": "https://images.unsplash.com/photo-1634586927845-8167f27fbab9?w=800",
+    "tags": "Món Nước,Heo,Hải sản",
+    "ingredients": [
+      { "name": "Hủ tiếu dai", "amount": 500, "unit": "g" },
+      { "name": "Xương ống", "amount": 1000, "unit": "g" },
+      { "name": "Tôm tươi", "amount": 300, "unit": "g" },
+      { "name": "Thịt heo xay", "amount": 200, "unit": "g" },
+      { "name": "Trứng cút", "amount": 20, "unit": "quả" }
+    ]
+  },
+  {
+    "title": "Gỏi Cuốn Tôm Thịt",
+    "description": "Món ăn thanh mát với tôm, thịt luộc, bún tươi và rau sống cuộn trong bánh tráng, chấm tương đen béo ngậy.",
+    "instructions": "Bước 1: Thịt ba chỉ luộc chín, thái lát mỏng. Tôm luộc chín, lột vỏ, chẻ đôi.\nBước 2: Rửa sạch xà lách, rau thơm, hẹ.\nBước 3: Làm ướt bánh tráng, trải rau, bún, thịt, tôm và hẹ rồi cuộn chặt tay.\nBước 4: Làm nước chấm tương đen (hoặc mắm nêm) với đậu phộng giã nhỏ.",
+    "difficulty": "Dễ",
+    "prepTime": 30,
+    "calories": 250,
+    "imageUrl": "https://images.unsplash.com/photo-1536521508731-1e967a5b3a4a?w=800",
+    "tags": "Đồ Cuốn,Ăn Vặt,Thanh mát",
+    "ingredients": [
+      { "name": "Bánh tráng", "amount": 20, "unit": "cái" },
+      { "name": "Tôm sú", "amount": 300, "unit": "g" },
+      { "name": "Thịt ba chỉ", "amount": 300, "unit": "g" },
+      { "name": "Bún tươi", "amount": 500, "unit": "g" },
+      { "name": "Tương đen", "amount": 100, "unit": "ml" }
+    ]
+  },
+  {
+    "title": "Bún Riêu Cua",
+    "description": "Bún riêu có vị chua thanh của cà chua, thơm mùi gạch cua đồng, ăn kèm đậu hũ chiên và chả ốc.",
+    "instructions": "Bước 1: Giã cua đồng, lọc lấy nước cốt. Đun nhỏ lửa cho gạch cua nổi lên.\nBước 2: Phi hành thơm, xào gạch cua với cà chua thái múi cau.\nBước 3: Trộn gạch cua vớt ra với thịt xay, trứng gà làm chả.\nBước 4: Cho cà chua xào, đậu hũ chiên vào nồi nước dùng, nêm mắm tôm. Trụng bún và chan nước.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 480,
+    "imageUrl": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=800",
+    "tags": "Món Nước,Hải sản,Truyền thống",
+    "ingredients": [
+      { "name": "Cua đồng", "amount": 500, "unit": "g" },
+      { "name": "Thịt heo xay", "amount": 100, "unit": "g" },
+      { "name": "Cà chua", "amount": 4, "unit": "quả" },
+      { "name": "Đậu hũ", "amount": 3, "unit": "miếng" },
+      { "name": "Bún tươi", "amount": 1000, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Cá Kho Tộ",
+    "description": "Cá lóc kho tộ màu cánh gián đẹp mắt, nước kho keo sánh, vị mặn ngọt đậm đà xen lẫn cay cay hạt tiêu.",
+    "instructions": "Bước 1: Làm sạch cá, cắt khúc. Thắng đường lấy nước màu.\nBước 2: Ướp cá với nước mắm, đường, tiêu, hành tỏi băm, nước màu trong 30 phút.\nBước 3: Cho cá vào tộ đất, thêm chút nước dừa tươi, kho lửa riu riu.\nBước 4: Kho đến khi nước cạn keo lại, rắc thêm tiêu, ớt và hành lá.",
+    "difficulty": "Trung bình",
+    "prepTime": 50,
+    "calories": 350,
+    "imageUrl": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800",
+    "tags": "Món Mặn,Cá,Truyền thống",
+    "ingredients": [
+      { "name": "Cá lóc (hoặc cá basa)", "amount": 500, "unit": "g" },
+      { "name": "Hành tím", "amount": 3, "unit": "củ" },
+      { "name": "Nước mắm", "amount": 3, "unit": "muỗng" },
+      { "name": "Tiêu sọ", "amount": 1, "unit": "muỗng nhỏ" },
+      { "name": "Ớt tươi", "amount": 2, "unit": "quả" }
+    ]
+  },
+  {
+    "title": "Canh Chua Cá Lóc",
+    "description": "Vị chua thanh từ me, thơm dứa, ngọt thịt cá lóc cùng các loại rau thơm tạo nên món canh giải nhiệt tuyệt vời.",
+    "instructions": "Bước 1: Sơ chế cá, chiên sơ cho săn. Ngâm me lấy nước cốt.\nBước 2: Phi tỏi, xào sơ thơm (khóm) và cà chua.\nBước 3: Đun sôi nước, cho nước me, cá vào nấu chín. Nêm gia vị đường, mắm, muối.\nBước 4: Cho đậu bắp, bạc hà (dọc mùng), giá đỗ vào. Tắt bếp rắc ngò ôm, ngò gai.",
+    "difficulty": "Dễ",
+    "prepTime": 30,
+    "calories": 200,
+    "imageUrl": "https://images.unsplash.com/photo-1548943487-a2e4b43b6852?w=800",
+    "tags": "Món Canh,Cá,Thanh mát",
+    "ingredients": [
+      { "name": "Cá lóc", "amount": 400, "unit": "g" },
+      { "name": "Me vắt", "amount": 30, "unit": "g" },
+      { "name": "Thơm (khóm)", "amount": 0.25, "unit": "trái" },
+      { "name": "Bạc hà (dọc mùng)", "amount": 1, "unit": "cây" },
+      { "name": "Cà chua", "amount": 2, "unit": "quả" }
+    ]
+  },
+  {
+    "title": "Thịt Kho Tàu",
+    "description": "Thịt ba chỉ mềm rục, béo ngậy, trứng vịt thấm đẫm nước dừa tươi có màu nâu cánh gián cực kỳ đưa cơm.",
+    "instructions": "Bước 1: Thái thịt miếng vuông to, ướp hành, tỏi, nước mắm, đường, tiêu khoảng 1 giờ.\nBước 2: Luộc chín bóc vỏ trứng vịt.\nBước 3: Xào săn thịt, đổ nước dừa tươi ngập thịt, đun sôi rồi hạ nhỏ lửa hầm 1.5 - 2 tiếng.\nBước 4: Cho trứng vịt vào kho thêm 30 phút để trứng ngấm màu mà không bị dai.",
+    "difficulty": "Dễ",
+    "prepTime": 150,
+    "calories": 650,
+    "imageUrl": "https://images.unsplash.com/photo-1616851221762-b9b5fc727f71?w=800",
+    "tags": "Món Mặn,Thịt Heo,Tết",
+    "ingredients": [
+      { "name": "Thịt ba chỉ", "amount": 1000, "unit": "g" },
+      { "name": "Trứng vịt", "amount": 10, "unit": "quả" },
+      { "name": "Nước dừa tươi", "amount": 1000, "unit": "ml" },
+      { "name": "Tỏi, hành tím", "amount": 50, "unit": "g" },
+      { "name": "Nước mắm", "amount": 4, "unit": "muỗng canh" }
+    ]
+  },
+  {
+    "title": "Gà Nướng Muối Ớt",
+    "description": "Thịt gà nướng vàng ươm, lớp da giòn cay nồng vị muối ớt, bên trong mọng nước ngọt thịt.",
+    "instructions": "Bước 1: Làm sạch gà, khứa nhẹ thịt. Giã nhuyễn tỏi, ớt, muối hạt, đường, bột ngọt.\nBước 2: Thoa đều hỗn hợp muối ớt lên mình gà, ướp 2 giờ.\nBước 3: Nướng gà trên than hoa hoặc nồi chiên không dầu ở 180 độ C, lật đều tay.\nBước 4: Quét thêm lớp dầu màu điều để gà có màu đẹp, chín vàng vớt ra chặt miếng.",
+    "difficulty": "Trung bình",
+    "prepTime": 150,
+    "calories": 500,
+    "imageUrl": "https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?w=800",
+    "tags": "Nướng,Gà,Cay",
+    "ingredients": [
+      { "name": "Gà ta", "amount": 1200, "unit": "g" },
+      { "name": "Muối hạt", "amount": 2, "unit": "muỗng" },
+      { "name": "Ớt hiểm", "amount": 5, "unit": "quả" },
+      { "name": "Tỏi", "amount": 1, "unit": "củ" },
+      { "name": "Dầu màu điều", "amount": 2, "unit": "muỗng" }
+    ]
+  },
+  {
+    "title": "Cháo Gà",
+    "description": "Bát cháo sánh mịn ngọt nước luộc gà, thịt gà ta xé phay trộn gỏi hành tây chua ngọt ăn giải cảm tuyệt vời.",
+    "instructions": "Bước 1: Gạo nếp trộn gạo tẻ vo sạch, rang sơ qua. Luộc gà với gừng, hành nướng.\nBước 2: Gà chín vớt ra xé sợi. Nước luộc cho gạo vào ninh nhừ thành cháo.\nBước 3: Bắp cải thái chỉ bóp chua ngọt trộn với thịt gà xé, rau răm.\nBước 4: Múc cháo ra tô, rắc tiêu, hành phi, hành lá. Ăn kèm gỏi gà.",
+    "difficulty": "Dễ",
+    "prepTime": 60,
+    "calories": 380,
+    "imageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800",
+    "tags": "Cháo,Gà,Thanh đạm",
+    "ingredients": [
+      { "name": "Gà ta", "amount": 1, "unit": "con" },
+      { "name": "Gạo tẻ", "amount": 100, "unit": "g" },
+      { "name": "Gạo nếp", "amount": 30, "unit": "g" },
+      { "name": "Bắp cải", "amount": 200, "unit": "g" },
+      { "name": "Hành khô", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bánh Cuốn",
+    "description": "Bánh cuốn mỏng, mướt mát, nhân thịt mộc nhĩ đậm đà, chấm với nước mắm chua ngọt và chả lụa.",
+    "instructions": "Bước 1: Trộn bột gạo, bột năng với nước, để nghỉ 2 tiếng.\nBước 2: Xào chín thịt băm với mộc nhĩ, hành tím, nêm chút hạt nêm.\nBước 3: Tráng lớp bột thật mỏng trên chảo chống dính hoặc nồi hơi, cho nhân vào cuộn lại.\nBước 4: Cắt bánh ra đĩa, rắc hành phi, dọn kèm chả lụa và nước mắm pha.",
+    "difficulty": "Trung bình",
+    "prepTime": 150,
+    "calories": 420,
+    "imageUrl": "https://images.unsplash.com/photo-1635392683935-7c5ef1e9a3b6?w=800",
+    "tags": "Bánh,Ăn Sáng,Hà Nội",
+    "ingredients": [
+      { "name": "Bột gạo", "amount": 200, "unit": "g" },
+      { "name": "Bột năng", "amount": 50, "unit": "g" },
+      { "name": "Thịt heo xay", "amount": 200, "unit": "g" },
+      { "name": "Mộc nhĩ", "amount": 30, "unit": "g" },
+      { "name": "Hành phi", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Xôi Gấc",
+    "description": "Hạt nếp dẻo thơm, màu đỏ tự nhiên từ gấc may mắn, vị béo ngậy của cốt dừa và chút ngọt thanh từ đường.",
+    "instructions": "Bước 1: Gạo nếp ngâm qua đêm cho mềm. Lấy ruột gấc bóp với chút rượu trắng.\nBước 2: Trộn đều nếp với thịt gấc, thêm chút muối.\nBước 3: Đồ xôi trong xửng hấp khoảng 30-40 phút đến khi hạt nếp chín mềm.\nBước 4: Trộn thêm đường và nước cốt dừa, đồ thêm 5 phút nữa là hoàn tất.",
+    "difficulty": "Trung bình",
+    "prepTime": 480,
+    "calories": 400,
+    "imageUrl": "https://images.unsplash.com/photo-1588661601646-685b597b830f?w=800",
+    "tags": "Xôi,Đồ Ngọt,Lễ Tết",
+    "ingredients": [
+      { "name": "Gạo nếp", "amount": 500, "unit": "g" },
+      { "name": "Quả gấc chín", "amount": 1, "unit": "quả" },
+      { "name": "Nước cốt dừa", "amount": 100, "unit": "ml" },
+      { "name": "Đường trắng", "amount": 50, "unit": "g" },
+      { "name": "Rượu trắng", "amount": 1, "unit": "muỗng" }
+    ]
+  },
+  {
+    "title": "Chè Ba Màu",
+    "description": "Ly chè mát lạnh với 3 tầng màu sắc hấp dẫn: đỏ đậu đỏ, vàng đậu xanh, xanh lá dứa, rưới nước cốt dừa béo ngậy.",
+    "instructions": "Bước 1: Ninh nhừ đậu đỏ với đường. Hấp chín đậu xanh tơi, xào với đường.\nBước 2: Nấu thạch rau câu hương lá dứa, đợi đông rồi thái hạt lựu.\nBước 3: Nước cốt dừa đun sôi lăn tăn với chút lá dứa và bột năng cho sánh lại.\nBước 4: Xếp vào ly một lớp đậu đỏ, đậu xanh, thạch lá dứa, đá bào và chan nước cốt dừa.",
+    "difficulty": "Trung bình",
+    "prepTime": 120,
+    "calories": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c8a9e9ce?w=800",
+    "tags": "Tráng Miệng,Chè,Thanh mát",
+    "ingredients": [
+      { "name": "Đậu đỏ", "amount": 150, "unit": "g" },
+      { "name": "Đậu xanh xát vỏ", "amount": 150, "unit": "g" },
+      { "name": "Bột rau câu", "amount": 10, "unit": "g" },
+      { "name": "Nước cốt dừa", "amount": 200, "unit": "ml" },
+      { "name": "Đường cát", "amount": 200, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bánh Mì Thịt Nướng",
+    "description": "Ổ bánh mì giòn rụm kẹp thịt nướng xiên que than hoa đậm đà, pate béo, đồ chua giòn giòn và xốt tương ớt cay cay.",
+    "instructions": "Bước 1: Ướp thịt băm hoặc thái mỏng với sả, hành tỏi băm, dầu hào, mật ong, mè rang.\nBước 2: Nướng xiên thịt trên than hoa tới khi xém vàng.\nBước 3: Xẻ ổ bánh mì, phết pate, bơ. Xếp thịt nướng, dưa leo, ngò rí, đồ chua.\nBước 4: Rưới tương ớt, xốt mayonnaise hoặc xốt thịt nướng lên và thưởng thức.",
+    "difficulty": "Dễ",
+    "prepTime": 60,
+    "calories": 480,
+    "imageUrl": "https://images.unsplash.com/photo-1601814944933-25a666e85ee2?w=800",
+    "tags": "Bánh Mì,Ăn Sáng,Đường Phố",
+    "ingredients": [
+      { "name": "Bánh mì", "amount": 4, "unit": "ổ" },
+      { "name": "Thịt heo nạc vai", "amount": 400, "unit": "g" },
+      { "name": "Pate gan", "amount": 50, "unit": "g" },
+      { "name": "Đồ chua (Cà rốt, củ cải)", "amount": 100, "unit": "g" },
+      { "name": "Ngò rí, dưa leo", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bún Mắm Miền Tây",
+    "description": "Nước lèo nấu từ mắm cá linh, cá sặc đậm mùi đặc trưng, ăn cùng tôm, mực, heo quay và hằng hà sa số các loại rau đồng.",
+    "instructions": "Bước 1: Nấu mắm cá linh, cá sặc tan ra rồi lọc lấy nước cốt trong.\nBước 2: Xào sả băm cho thơm, đổ nước mắm cốt cùng nước hầm xương vào đun sôi, nêm nếm.\nBước 3: Sơ chế các loại hải sản (tôm, mực), cá lóc xắt lát, heo quay cắt miếng.\nBước 4: Trụng bún, xếp topping lên trên, chan nước mắm lèo đang sôi, ăn kèm bông súng, điên điển, rau đắng.",
+    "difficulty": "Khó",
+    "prepTime": 90,
+    "calories": 550,
+    "imageUrl": "https://images.unsplash.com/photo-1634586927845-8167f27fbab9?w=800",
+    "tags": "Món Nước,Miền Tây,Đặc sản",
+    "ingredients": [
+      { "name": "Mắm cá linh, cá sặc", "amount": 150, "unit": "g" },
+      { "name": "Heo quay", "amount": 200, "unit": "g" },
+      { "name": "Tôm, Mực", "amount": 300, "unit": "g" },
+      { "name": "Cá lóc phi lê", "amount": 200, "unit": "g" },
+      { "name": "Rau đồng các loại", "amount": 300, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bò Lúc Lắc",
+    "description": "Thịt bò thăn thái khối vuông mềm mọng, xào xém lửa cháy cạnh cùng hành tây, ớt chuông, ăn kèm khoai tây chiên.",
+    "instructions": "Bước 1: Thái bò thành khối vuông 2cm. Ướp dầu hào, nước tương, tiêu, tỏi băm.\nBước 2: Hành tây, ớt chuông thái vuông. Chiên giòn khoai tây ăn kèm.\nBước 3: Đun chảo thật nóng, cho dầu ăn và tỏi vào phi. Trút bò vào đảo xém cạnh thật nhanh (lúc lắc chảo).\nBước 4: Cho hành tây, ớt chuông vào xào nhanh 1 phút. Trút ra đĩa, dọn kèm salad.",
+    "difficulty": "Trung bình",
+    "prepTime": 45,
+    "calories": 600,
+    "imageUrl": "https://images.unsplash.com/photo-1629235974057-79774a95a127?w=800",
+    "tags": "Món Xào,Bò,Hấp dẫn",
+    "ingredients": [
+      { "name": "Thịt thăn bò", "amount": 400, "unit": "g" },
+      { "name": "Ớt chuông đỏ, xanh", "amount": 1, "unit": "quả" },
+      { "name": "Hành tây", "amount": 1, "unit": "củ" },
+      { "name": "Khoai tây", "amount": 300, "unit": "g" },
+      { "name": "Tỏi băm", "amount": 20, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bún Đậu Mắm Tôm",
+    "description": "Bún lá vắt mỏng, đậu phụ rán giòn ngoài xốp trong, thịt chân giò luộc, chả cốm chiên chấm mắm tôm tắc ớt sủi bọt.",
+    "instructions": "Bước 1: Đậu hũ cắt cục vuông, chiên ngập dầu cho phồng rộp, giòn rụm.\nBước 2: Luộc chín thịt chân giò, để nguội thái lát thật mỏng. Chiên chả cốm.\nBước 3: Pha mắm tôm với đường, bột ngọt, vắt tắc (quất), thêm dầu sôi vào đánh bông lên, cho ớt tươi.\nBước 4: Bày bún lá, đậu, thịt, chả cốm, dưa leo, tía tô, kinh giới ra mẹt tre.",
+    "difficulty": "Dễ",
+    "prepTime": 45,
+    "calories": 700,
+    "imageUrl": "https://images.unsplash.com/photo-1606757657967-dfdbfb0e2712?w=800",
+    "tags": "Món Khô,Mắm Tôm,Hà Nội",
+    "ingredients": [
+      { "name": "Bún lá", "amount": 500, "unit": "g" },
+      { "name": "Đậu hũ", "amount": 4, "unit": "miếng" },
+      { "name": "Thịt bắp chân giò", "amount": 300, "unit": "g" },
+      { "name": "Chả cốm", "amount": 200, "unit": "g" },
+      { "name": "Mắm tôm", "amount": 50, "unit": "ml" }
+    ]
+  },
+  {
+    "title": "Chả Cá Lã Vọng",
+    "description": "Cá lăng thái miếng tẩm ướp riềng mẻ nướng than, sau đó áp chảo ngập hành thì là, ăn kèm bún và mắm tôm.",
+    "instructions": "Bước 1: Lọc thịt cá lăng, thái miếng vừa ăn, ướp với nước cốt riềng, nghệ, mẻ, mắm tôm, chút đường.\nBước 2: Nướng sơ cá trên bếp than hoa cho thơm.\nBước 3: Đặt chảo dầu lên bếp, cho cá vào chiên sơ, bỏ thật nhiều hành hoa, thì là cắt khúc vào đảo cùng.\nBước 4: Gắp cá và rau ra bát, ăn kèm bún tươi, đậu phộng rang và mắm tôm pha.",
+    "difficulty": "Khó",
+    "prepTime": 120,
+    "calories": 650,
+    "imageUrl": "https://images.unsplash.com/photo-1596484552993-3d078b663b46?w=800",
+    "tags": "Đặc sản,Cá,Hà Nội",
+    "ingredients": [
+      { "name": "Phi lê cá lăng (hoặc cá lóc)", "amount": 500, "unit": "g" },
+      { "name": "Thì là, hành lá", "amount": 200, "unit": "g" },
+      { "name": "Bún tươi", "amount": 500, "unit": "g" },
+      { "name": "Đậu phộng rang", "amount": 100, "unit": "g" },
+      { "name": "Riềng, mẻ, nghệ", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bò Kho",
+    "description": "Thịt bò gân sụn hầm mềm nhừ với cà rốt, nước dùng sánh sệt thơm phức mùi sả, ngũ vị hương và quế hồi.",
+    "instructions": "Bước 1: Bò cắt cục vuông to, ướp ngũ vị hương, sả băm, hành tỏi, nước tương, dầu điều.\nBước 2: Xào săn thịt bò. Cho nước dừa tươi, hoa hồi, quế, sả đập dập vào hầm 1.5 - 2 tiếng.\nBước 3: Cà rốt cắt khúc hoặc tỉa hoa, cho vào nồi hầm ở 20 phút cuối cho chín mềm.\nBước 4: Hoà chút bột năng đun sôi cho nước hơi sánh. Múc ra tô dùng kèm bánh mì, hủ tiếu ngò gai.",
+    "difficulty": "Trung bình",
+    "prepTime": 150,
+    "calories": 550,
+    "imageUrl": "https://images.unsplash.com/photo-1574484284002-952d92456975?w=800",
+    "tags": "Món Nước,Bò,Ăn Sáng",
+    "ingredients": [
+      { "name": "Thịt nạm bò", "amount": 500, "unit": "g" },
+      { "name": "Cà rốt", "amount": 2, "unit": "củ" },
+      { "name": "Sả", "amount": 3, "unit": "cây" },
+      { "name": "Gói gia vị bò kho", "amount": 1, "unit": "gói" },
+      { "name": "Nước dừa tươi", "amount": 500, "unit": "ml" }
+    ]
+  },
+  {
+    "title": "Gỏi Ngó Sen Tôm Thịt",
+    "description": "Ngó sen giòn sần sật, tôm ngọt thịt, heo luộc béo xen kẽ, trộn cùng nước mắm chua ngọt và rau răm thơm lừng.",
+    "instructions": "Bước 1: Ngó sen cắt khúc, chẻ mỏng, ngâm giấm đường cho trắng và giòn.\nBước 2: Tôm luộc bóc vỏ chẻ đôi. Thịt ba chỉ luộc chín thái mỏng.\nBước 3: Pha nước mắm trộn gỏi: mắm, đường, nước cốt chanh, tỏi ớt băm nhuyễn.\nBước 4: Vắt ráo ngó sen, trộn đều ngó sen, tôm, thịt, cà rốt bào với nước mắm pha. Rắc rau răm, đậu phộng rang, hành phi.",
+    "difficulty": "Dễ",
+    "prepTime": 45,
+    "calories": 250,
+    "imageUrl": "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?w=800",
+    "tags": "Gỏi,Khai vị,Thanh mát",
+    "ingredients": [
+      { "name": "Ngó sen", "amount": 300, "unit": "g" },
+      { "name": "Tôm sú", "amount": 200, "unit": "g" },
+      { "name": "Thịt ba chỉ", "amount": 200, "unit": "g" },
+      { "name": "Cà rốt", "amount": 1, "unit": "củ" },
+      { "name": "Đậu phộng rang", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bún Thịt Nướng",
+    "description": "Bún tươi ăn cùng thịt heo nướng sả thơm lừng, chả giò giòn rụm, rau sống và nước mắm chua ngọt.",
+    "instructions": "Bước 1: Thịt heo thái mỏng ướp sả, tỏi, hành, nước mắm, mật ong, dầu mè.\nBước 2: Nướng thịt trên than hoa cho chín vàng, xém cạnh.\nBước 3: Chiên chả giò (nem rán) ngập dầu tới khi vàng giòn.\nBước 4: Cho bún, rau sống, dưa leo, thịt nướng, chả giò vào tô. Rắc đậu phộng, mỡ hành và chan nước mắm chua ngọt.",
+    "difficulty": "Dễ",
+    "prepTime": 60,
+    "calories": 550,
+    "imageUrl": "https://images.unsplash.com/photo-1555126634-323283e090fa?w=800",
+    "tags": "Món Khô,Thịt Heo,Miền Nam",
+    "ingredients": [
+      { "name": "Thịt nạc dăm", "amount": 500, "unit": "g" },
+      { "name": "Bún tươi", "amount": 500, "unit": "g" },
+      { "name": "Chả giò (Nem rán)", "amount": 10, "unit": "cuốn" },
+      { "name": "Rau sống, giá, dưa leo", "amount": 200, "unit": "g" },
+      { "name": "Đậu phộng rang", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bánh Canh Cua",
+    "description": "Nước dùng sánh sệt đậm đà vị gạch cua, sợi bánh canh dai dai cùng thịt cua bóc sẵn, tôm, chả cua và huyết.",
+    "instructions": "Bước 1: Hầm xương heo lấy nước dùng. Luộc cua lấy thịt và gạch cua.\nBước 2: Xào gạch cua với màu điều cho thơm. Phi hành xào sơ tôm, nấm rơm.\nBước 3: Cho tôm, nấm, thịt cua vào nồi nước dùng. Nêm nếm gia vị và pha chút bột năng cho nước sánh lại.\nBước 4: Luộc bánh canh bột lọc cho vào nồi. Thêm huyết heo, chả cua. Múc ra tô rắc hành ngò, tiêu.",
+    "difficulty": "Trung bình",
+    "prepTime": 120,
+    "calories": 480,
+    "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+    "tags": "Món Nước,Hải sản,Miền Nam",
+    "ingredients": [
+      { "name": "Bánh canh bột lọc", "amount": 500, "unit": "g" },
+      { "name": "Cua biển", "amount": 2, "unit": "con" },
+      { "name": "Tôm tươi", "amount": 200, "unit": "g" },
+      { "name": "Xương heo", "amount": 500, "unit": "g" },
+      { "name": "Huyết heo", "amount": 1, "unit": "miếng" }
+    ]
+  },
+  {
+    "title": "Bún Nước Lèo Sóc Trăng",
+    "description": "Đặc sản miền Tây với nước lèo thơm phức mùi mắm bò hóc, ngải bún, kết hợp thịt heo quay, cá lóc và tôm đất.",
+    "instructions": "Bước 1: Nấu mắm bò hóc hoặc mắm sặc lấy nước cốt. Hầm xương heo, sả đập dập, ngải bún lấy nước dùng trong.\nBước 2: Luộc cá lóc lấy thịt, gỡ xương. Luộc tôm lột vỏ.\nBước 3: Hoà nước mắm cốt vào nồi nước hầm xương, nêm đường phèn, bột ngọt cho dịu vị.\nBước 4: Trụng bún tươi, xếp tôm, cá lóc, thịt heo quay lên trên. Chan nước lèo ăn cùng bắp chuối bào, hẹ.",
+    "difficulty": "Khó",
+    "prepTime": 150,
+    "calories": 520,
+    "imageUrl": "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=800",
+    "tags": "Món Nước,Miền Tây,Đặc sản",
+    "ingredients": [
+      { "name": "Mắm bò hóc", "amount": 100, "unit": "g" },
+      { "name": "Cá lóc", "amount": 500, "unit": "g" },
+      { "name": "Tôm đất", "amount": 200, "unit": "g" },
+      { "name": "Heo quay", "amount": 200, "unit": "g" },
+      { "name": "Ngải bún, sả cây", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Cơm Gà Hội An",
+    "description": "Hạt cơm vàng óng ánh tơi xốp nấu bằng nước luộc gà, ăn cùng thịt gà ta xé bóp gỏi hành tây rau răm chua chua ngọt ngọt.",
+    "instructions": "Bước 1: Gà ta luộc với gừng, hành tím. Gà chín vớt ra để nguội xé sợi nhỏ.\nBước 2: Vo gạo, rang sơ với tỏi phi và bột nghệ. Dùng nước luộc gà nấu cơm cho chín tơi.\nBước 3: Bóp hành tây ngâm đá với đường, chanh. Trộn hành tây với gà xé, muối tiêu, rau răm.\nBước 4: Xới cơm ra đĩa, bày gỏi gà xé lên trên. Ăn kèm một chén nước canh gà nhỏ.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 580,
+    "imageUrl": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800",
+    "tags": "Cơm,Gà,Miền Trung",
+    "ingredients": [
+      { "name": "Gà ta", "amount": 1, "unit": "con" },
+      { "name": "Gạo tẻ", "amount": 400, "unit": "g" },
+      { "name": "Hành tây", "amount": 1, "unit": "củ" },
+      { "name": "Bột nghệ", "amount": 1, "unit": "muỗng" },
+      { "name": "Rau răm, chanh, ớt", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bò Nhúng Dấm",
+    "description": "Lẩu bò nhúng dấm chua thanh vị cốt dừa và dấm gạo, cuốn với bánh tráng, rau rừng, khế chua, chuối chát, chấm mắm nêm.",
+    "instructions": "Bước 1: Nấu nước nhúng lẩu gồm dấm, nước cốt dừa, nước dừa tươi, sả đập dập, hành tây thái mỏng, nêm chút đường, muối.\nBước 2: Thịt bò thái lát thật mỏng, ướp sơ với chút sả và dầu ăn cho mềm.\nBước 3: Chuẩn bị rau sống, chuối chát, khế xanh thái mỏng ngâm nước muối.\nBước 4: Nhúng bò vào nước lẩu sôi, cuốn bánh tráng, bún, rau sống và chấm mắm nêm đậm đà.",
+    "difficulty": "Dễ",
+    "prepTime": 45,
+    "calories": 400,
+    "imageUrl": "https://images.unsplash.com/photo-1629235974057-79774a95a127?w=800",
+    "tags": "Lẩu,Đồ Cuốn,Bò",
+    "ingredients": [
+      { "name": "Thịt thăn bò", "amount": 500, "unit": "g" },
+      { "name": "Nước cốt dừa", "amount": 200, "unit": "ml" },
+      { "name": "Dấm gạo", "amount": 100, "unit": "ml" },
+      { "name": "Bánh tráng, bún", "amount": 500, "unit": "g" },
+      { "name": "Mắm nêm", "amount": 100, "unit": "ml" }
+    ]
+  },
+  {
+    "title": "Lẩu Mắm Miền Tây",
+    "description": "Nồi lẩu mắm thơm lừng quy tụ đặc sản miền sông nước với tôm, mực, heo quay, cá lóc, bông súng, điên điển, kèo nèo.",
+    "instructions": "Bước 1: Nấu mắm sặc, mắm linh lấy cốt trong. Đập sả, tỏi xào thơm, cho mắm cốt và nước dừa non vào đun sôi.\nBước 2: Nêm nếm lẩu bằng chút đường phèn cho dịu vị mặn của mắm. Bỏ thêm cà tím xắt khúc.\nBước 3: Xếp cá lóc, tôm sú, mực ống, heo quay cắt miếng ra đĩa.\nBước 4: Bày các loại rau đồng. Khi ăn, nhúng hải sản, heo quay và rau vào nồi lẩu đang sôi, ăn với bún tươi.",
+    "difficulty": "Khó",
+    "prepTime": 120,
+    "calories": 650,
+    "imageUrl": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800",
+    "tags": "Lẩu,Đặc sản,Miền Tây",
+    "ingredients": [
+      { "name": "Mắm cá linh, cá sặc", "amount": 200, "unit": "g" },
+      { "name": "Cá lóc", "amount": 500, "unit": "g" },
+      { "name": "Tôm, mực", "amount": 500, "unit": "g" },
+      { "name": "Heo quay", "amount": 300, "unit": "g" },
+      { "name": "Rau đồng (bông súng, điên điển...)", "amount": 500, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Lẩu Gà Lá É",
+    "description": "Món lẩu đặc sản Phú Yên ngập tràn hương vị the mát, cay nồng của lá é và ớt hiểm xanh, hoà quyện nước dùng gà ngọt thanh.",
+    "instructions": "Bước 1: Gà ta chặt miếng, ướp với nửa phần lá é giã nhuyễn, ớt hiểm xanh, tỏi, hành, muối hạt.\nBước 2: Xào săn thịt gà cho ngấm gia vị. Đổ nước vào ninh khoảng 30 phút cho gà mềm.\nBước 3: Cho măng chua hoặc măng củ thái mỏng vào đun cùng.\nBước 4: Khi ăn đun sôi lẩu, nhúng thêm nấm bào ngư và phần lá é còn tươi vào, vớt ra ăn liền cùng bún.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 500,
+    "imageUrl": "https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?w=800",
+    "tags": "Lẩu,Gà,Miền Trung",
+    "ingredients": [
+      { "name": "Gà ta", "amount": 1, "unit": "con" },
+      { "name": "Lá é", "amount": 300, "unit": "g" },
+      { "name": "Măng chua", "amount": 300, "unit": "g" },
+      { "name": "Ớt hiểm xanh", "amount": 30, "unit": "g" },
+      { "name": "Nấm bào ngư", "amount": 200, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Lẩu Cá Lăng Măng Chua",
+    "description": "Nồi lẩu cá lăng chua chua cay cay vị măng và dứa, thịt cá lăng chắc nịch béo ngậy, ăn một lần là nhớ mãi.",
+    "instructions": "Bước 1: Cá lăng làm sạch, khứa khoanh, chần sơ nước sôi với gừng để khử tanh.\nBước 2: Phi tỏi thơm, xào cà chua, thơm (dứa) và măng chua cho ra màu và ngấm vị.\nBước 3: Đổ nước hầm xương vào đun sôi, nêm nếm gia vị, sa tế, nước cốt me cho có vị chua cay mặn ngọt vừa vặn.\nBước 4: Nhúng cá lăng vào nồi lẩu, thêm rau ngổ, ngò gai. Ăn kèm bún tươi và rau muống chẻ.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 450,
+    "imageUrl": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=800",
+    "tags": "Lẩu,Cá,Chua Cay",
+    "ingredients": [
+      { "name": "Cá lăng", "amount": 1000, "unit": "g" },
+      { "name": "Măng chua", "amount": 300, "unit": "g" },
+      { "name": "Cà chua, dứa", "amount": 200, "unit": "g" },
+      { "name": "Rau ngổ, ngò gai", "amount": 50, "unit": "g" },
+      { "name": "Bún tươi", "amount": 500, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Ốc Hương Rang Muối Tây Ninh",
+    "description": "Ốc hương giòn ngọt thấm đẫm lớp muối tôm Tây Ninh mặn mặn, cay xé lưỡi bám bên ngoài vỏ, lai rai rất tốn mồi.",
+    "instructions": "Bước 1: Ốc hương ngâm nước vo gạo và ớt cho nhả sạch nhớt, luộc sơ với sả, gừng.\nBước 2: Pha hỗn hợp muối rang: muối tôm Tây Ninh, đường, bột ngọt, ớt xay, chút nước.\nBước 3: Đun nóng chảo, cho hỗn hợp muối vào đun sôi bọt.\nBước 4: Đổ ốc hương vào đảo đều tay trên lửa vừa đến khi muối cạn nước, bám lớp áo trắng khô quanh vỏ ốc.",
+    "difficulty": "Dễ",
+    "prepTime": 40,
+    "calories": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-87063dbdb6eb?w=800",
+    "tags": "Hải sản,Ăn vặt,Cay",
+    "ingredients": [
+      { "name": "Ốc hương", "amount": 500, "unit": "g" },
+      { "name": "Muối tôm Tây Ninh", "amount": 3, "unit": "muỗng" },
+      { "name": "Đường", "amount": 1, "unit": "muỗng" },
+      { "name": "Ớt sừng xay", "amount": 2, "unit": "quả" },
+      { "name": "Sả đập dập", "amount": 2, "unit": "cây" }
+    ]
+  },
+  {
+    "title": "Nghêu Hấp Sả",
+    "description": "Nồi nghêu hấp sả bốc khói nghi ngút, thơm nồng mùi sả ớt, nước nghêu ngọt lịm cay cay chấm cùng nước mắm chua ngọt.",
+    "instructions": "Bước 1: Nghêu rửa sạch vỏ, ngâm nước ớt 2 tiếng cho nhả cát.\nBước 2: Xếp sả đập dập lót dưới đáy nồi. Cho nghêu lên trên.\nBước 3: Thêm 1 bát nhỏ nước lọc, ớt sừng xắt lát, 1 muỗng đường, 1/2 muỗng hạt nêm.\nBước 4: Đậy kín nắp đun lửa lớn 3-5 phút tới khi nghêu vừa há miệng. Tắt bếp, vớt bọt, thưởng thức ngay.",
+    "difficulty": "Dễ",
+    "prepTime": 120,
+    "calories": 150,
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-87063dbdb6eb?w=800",
+    "tags": "Hải sản,Khai vị,Nhanh",
+    "ingredients": [
+      { "name": "Nghêu sống", "amount": 1000, "unit": "g" },
+      { "name": "Sả cây", "amount": 5, "unit": "cây" },
+      { "name": "Ớt sừng", "amount": 2, "unit": "quả" },
+      { "name": "Đường", "amount": 1, "unit": "muỗng" },
+      { "name": "Nước mắm", "amount": 1, "unit": "muỗng" }
+    ]
+  },
+  {
+    "title": "Sò Lông Nướng Mỡ Hành",
+    "description": "Sò lông nướng than hoa thơm lừng mỡ hành béo ngậy, rắc thêm chút đậu phộng rang giòn bùi bùi chấm mắm me.",
+    "instructions": "Bước 1: Sò lông chà sạch vỏ, luộc sơ qua cho há miệng, lột bỏ một bên vỏ.\nBước 2: Làm mỡ hành: cắt nhỏ hành lá, đun sôi dầu ăn đổ vào chén hành, thêm chút xíu muối đường.\nBước 3: Xếp sò lên vỉ nướng than hoa. Khi thịt sò săn lại và nước sôi sùng sục thì rưới mỡ hành lên từng con.\nBước 4: Nướng thêm 1 phút, rắc đậu phộng rang giã nhỏ lên trên. Gắp ra dùng nóng với mắm me.",
+    "difficulty": "Dễ",
+    "prepTime": 45,
+    "calories": 280,
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-87063dbdb6eb?w=800",
+    "tags": "Nướng,Hải sản,Ăn Vặt",
+    "ingredients": [
+      { "name": "Sò lông", "amount": 1000, "unit": "g" },
+      { "name": "Hành lá", "amount": 100, "unit": "g" },
+      { "name": "Đậu phộng rang", "amount": 50, "unit": "g" },
+      { "name": "Dầu ăn", "amount": 5, "unit": "muỗng" },
+      { "name": "Mắm me", "amount": 50, "unit": "ml" }
+    ]
+  },
+  {
+    "title": "Cua Rang Me",
+    "description": "Thịt cua chắc nịch tắm trong lớp nước xốt me chua ngọt sánh kẹo, chấm cùng bánh mì nướng bơ tỏi ngon tuyệt.",
+    "instructions": "Bước 1: Cua làm sạch, chặt làm tư, đập dập càng lớn. Tẩm bột năng áo mỏng, chiên ngập dầu cho chín giòn, vớt ra.\nBước 2: Dầm me vắt lấy nước cốt chua.\nBước 3: Phi thơm tỏi băm, cho nước cốt me, đường, tương ớt, nước mắm, xíu muối đun cho xốt sệt lại.\nBước 4: Cho cua đã chiên vào chảo xốt đảo đều 3 phút cho xốt bám đều lên cua. Trút ra đĩa, trang trí ngò rí.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 450,
+    "imageUrl": "https://images.unsplash.com/photo-1548943487-a2e4b43b6852?w=800",
+    "tags": "Hải sản,Món Mặn,Chua Ngọt",
+    "ingredients": [
+      { "name": "Cua biển", "amount": 2, "unit": "con" },
+      { "name": "Me vắt", "amount": 50, "unit": "g" },
+      { "name": "Tỏi băm", "amount": 20, "unit": "g" },
+      { "name": "Bột năng", "amount": 20, "unit": "g" },
+      { "name": "Đường, nước mắm", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bánh Bèo Chén",
+    "description": "Bánh bèo Huế đúc từng chén nhỏ xíu xíu, xoáy giữa, rắc tôm chấy đỏ cam, tóp mỡ giòn rụm và mỡ hành, chan nước mắm ngọt.",
+    "instructions": "Bước 1: Pha bột gạo, bột năng với nước lọc, thêm xíu muối, để bột nghỉ 1 tiếng.\nBước 2: Làm tôm chấy: Tôm luộc chín, bóc vỏ, giã nhuyễn rồi rang khô tơi trên chảo. Làm mỡ hành, chiên tóp mỡ.\nBước 3: Quét dầu ăn vào chén bánh bèo nhỏ, đổ bột vào hấp cách thủy lửa lớn khoảng 7 phút bánh sẽ xoáy đồng tiền.\nBước 4: Bánh chín lấy ra, thoa mỡ hành, rắc tôm chấy, tóp mỡ. Chan nước mắm ớt pha loãng, hơi ngọt.",
+    "difficulty": "Trung bình",
+    "prepTime": 90,
+    "calories": 300,
+    "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+    "tags": "Bánh,Huế,Ăn Vặt",
+    "ingredients": [
+      { "name": "Bột gạo", "amount": 200, "unit": "g" },
+      { "name": "Bột năng", "amount": 30, "unit": "g" },
+      { "name": "Tôm tươi", "amount": 200, "unit": "g" },
+      { "name": "Tóp mỡ, mỡ hành", "amount": 50, "unit": "g" },
+      { "name": "Nước mắm ngọt", "amount": 100, "unit": "ml" }
+    ]
+  },
+  {
+    "title": "Bánh Bột Lọc",
+    "description": "Lớp vỏ bột lọc trong suốt dai dai sần sật, nhìn thấy rõ nhân con tôm thịt kho mặn mà bên trong, chấm mắm ruốc hoặc mắm mặn.",
+    "instructions": "Bước 1: Thịt ba chỉ xắt hạt lựu, tôm lột vỏ. Xào nhân với hành tỏi, nước mắm, đường, tiêu, nước màu cho keo lại.\nBước 2: Nhồi bột năng với nước sôi già cho bột chín dẻo, nhồi đến khi không dính tay.\nBước 3: Vo viên bột nhỏ, cán mỏng, cho nhân tôm thịt vào giữa, gấp đôi mép lại thành hình bán nguyệt dẹt.\nBước 4: Luộc bánh trong nước sôi đến khi nổi lên vỏ trong vắt, vớt ra ngâm nước lạnh rồi trộn mỡ hành. Ăn kèm nước mắm ngọt cay.",
+    "difficulty": "Khó",
+    "prepTime": 120,
+    "calories": 350,
+    "imageUrl": "https://images.unsplash.com/photo-1635392683935-7c5ef1e9a3b6?w=800",
+    "tags": "Bánh,Huế,Dai ngon",
+    "ingredients": [
+      { "name": "Bột năng", "amount": 400, "unit": "g" },
+      { "name": "Tôm đất", "amount": 200, "unit": "g" },
+      { "name": "Thịt ba chỉ", "amount": 150, "unit": "g" },
+      { "name": "Hành lá", "amount": 50, "unit": "g" },
+      { "name": "Nước nóng", "amount": 250, "unit": "ml" }
+    ]
+  },
+  {
+    "title": "Bánh Tráng Trộn",
+    "description": "Món ăn vặt đường phố quốc dân: Bánh tráng cắt sợi trộn xốt bò đen, muối tôm, sa tế, xoài chua, khô bò, trứng cút và rau răm.",
+    "instructions": "Bước 1: Bánh tráng cắt sợi vừa ăn, xoài xanh bào sợi. Trứng cút luộc bóc vỏ.\nBước 2: Làm mỡ hành. Hành khô bào mỏng phi vàng giòn.\nBước 3: Cho bánh tráng vào tô lớn, thêm xoài xanh, trứng cút, khô bò, khô mực, tép sấy, đậu phộng, hành phi, mỡ hành, rau răm.\nBước 4: Cho nước xốt me, xốt bò đen, muối tôm, sa tế dầu vào. Đeo bao tay trộn đều tay cho bánh tráng mềm thấm vị. Ăn ngay.",
+    "difficulty": "Dễ",
+    "prepTime": 20,
+    "calories": 320,
+    "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800",
+    "tags": "Ăn vặt,Đường phố,Nhanh",
+    "ingredients": [
+      { "name": "Bánh tráng trắng", "amount": 100, "unit": "g" },
+      { "name": "Xoài xanh", "amount": 1, "unit": "trái" },
+      { "name": "Khô bò, khô mực", "amount": 50, "unit": "g" },
+      { "name": "Trứng cút", "amount": 10, "unit": "quả" },
+      { "name": "Xốt me", "amount": 3, "unit": "muỗng" }
+    ]
+  },
+  {
+    "title": "Bánh Tráng Nướng",
+    "description": "Được mệnh danh là 'Pizza Việt Nam', bánh tráng nướng than hoa giòn rụm với trứng cút, tép khô, mỡ hành, xúc xích và phô mai.",
+    "instructions": "Bước 1: Chuẩn bị bếp than củi nhỏ. Đặt bánh tráng lên vỉ.\nBước 2: Thoa mỡ hành lên bánh, đập 2 quả trứng cút vào, dùng cọ đánh tan dàn đều mặt bánh.\nBước 3: Rắc ngay tép khô sấy, thịt băm xào, xúc xích cắt lát, chà bông lên trên. Xoay tròn bánh liên tục.\nBước 4: Khi bánh chín giòn, xịt tương ớt và sốt mayonnaise thành vòng tròn. Gập đôi bánh lại.",
+    "difficulty": "Dễ",
+    "prepTime": 15,
+    "calories": 250,
+    "imageUrl": "https://images.unsplash.com/photo-1620025750316-0e1ceaa9681d?w=800",
+    "tags": "Ăn vặt,Đà Lạt,Nướng",
+    "ingredients": [
+      { "name": "Bánh tráng dày", "amount": 4, "unit": "cái" },
+      { "name": "Trứng cút", "amount": 8, "unit": "quả" },
+      { "name": "Tép khô", "amount": 50, "unit": "g" },
+      { "name": "Xúc xích", "amount": 100, "unit": "g" },
+      { "name": "Tương ớt", "amount": 2, "unit": "muỗng" }
+    ]
+  },
+  {
+    "title": "Bún Cá Châu Đốc",
+    "description": "Bún cá lóc đồng nước lèo vàng ươm màu củ ngải bún và nghệ, cá xào thơm nức, ăn kèm bông điên điển mùa nước nổi.",
+    "instructions": "Bước 1: Hầm xương ống với sả cây. Giã ngải bún, sả, nghệ vắt lấy nước cốt pha vào nồi hầm.\nBước 2: Luộc chín cá lóc đồng trong nồi nước dùng, vớt ra gỡ thịt giữ nguyên miếng lớn.\nBước 3: Ướp cá lóc với chút hạt nêm, tỏi. Phi hành tỏi, sả nghệ xào sơ cá cho thấm vị.\nBước 4: Trụng bún, xếp cá lóc. Chan nước lèo trong vắt, ăn kèm rau muống bào, bông điên điển, mắm me.",
+    "difficulty": "Khó",
+    "prepTime": 120,
+    "calories": 480,
+    "imageUrl": "https://images.unsplash.com/photo-1634586927845-8167f27fbab9?w=800",
+    "tags": "Món Nước,Cá,Đặc sản",
+    "ingredients": [
+      { "name": "Cá lóc đồng", "amount": 1000, "unit": "g" },
+      { "name": "Bún tươi", "amount": 1000, "unit": "g" },
+      { "name": "Ngải bún, củ nghệ", "amount": 50, "unit": "g" },
+      { "name": "Bông điên điển", "amount": 200, "unit": "g" },
+      { "name": "Mắm ruốc", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Bún Thang Hà Nội",
+    "description": "Bát bún thang cầu kỳ tinh tế với hàng chục nguyên liệu thái chỉ tăm: trứng tráng, giò lụa, gà xé, củ cải dầm, chan nước dùng trong vắt.",
+    "instructions": "Bước 1: Hầm nước luộc gà cùng xương heo, sá sùng. Nước lèo đun nhỏ lửa, hớt bọt liên tục để trong vắt.\nBước 2: Trứng gà tráng lớp thật mỏng, thái chỉ. Giò lụa thái chỉ tăm. Củ cải khô ngâm nở xào chua ngọt.\nBước 3: Gà luộc chín xé sợi mỏng. Nấm hương ngâm nở xào kỹ.\nBước 4: Xếp bún tơi vào bát, xếp từng nhúm màu sắc của nguyên liệu quanh bát. Thêm chút mắm tôm, chan nước dùng thật nóng.",
+    "difficulty": "Khó",
+    "prepTime": 180,
+    "calories": 420,
+    "imageUrl": "https://images.unsplash.com/photo-1615486171448-4fdcb3cc51fa?w=800",
+    "tags": "Món Nước,Gà,Hà Nội",
+    "ingredients": [
+      { "name": "Gà ta", "amount": 1, "unit": "con" },
+      { "name": "Giò lụa", "amount": 150, "unit": "g" },
+      { "name": "Trứng gà", "amount": 2, "unit": "quả" },
+      { "name": "Sá sùng khô", "amount": 20, "unit": "g" },
+      { "name": "Củ cải khô", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Cháo Lòng",
+    "description": "Nồi cháo màu nâu đặc trưng thơm lừng mùi hành ngò nướng, ăn cùng lòng dồi luộc giòn sần sật, dạ dày, gan, tim và dồi huyết nướng.",
+    "instructions": "Bước 1: Hầm xương heo lấy nước ngọt. Luộc các loại nội tạng heo với gừng và hành tím cho thơm.\nBước 2: Gạo tẻ rang sơ, cho vào nước luộc nội tạng nấu nhừ thành cháo, pha thêm chút huyết tươi để tạo màu.\nBước 3: Nhồi dồi huyết luộc hoặc chiên vàng thái lát.\nBước 4: Lòng luộc chín thái mỏng. Múc cháo ra tô, xếp lòng, dồi lên trên. Rắc hạt tiêu, hành hoa, ăn kèm quẩy.",
+    "difficulty": "Trung bình",
+    "prepTime": 150,
+    "calories": 600,
+    "imageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800",
+    "tags": "Cháo,Thịt Heo,Ăn Sáng",
+    "ingredients": [
+      { "name": "Gạo tẻ", "amount": 150, "unit": "g" },
+      { "name": "Xương ống", "amount": 500, "unit": "g" },
+      { "name": "Nội tạng heo", "amount": 500, "unit": "g" },
+      { "name": "Huyết heo", "amount": 200, "unit": "ml" },
+      { "name": "Quẩy", "amount": 200, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Cháo Lươn Nghệ An",
+    "description": "Bát cháo lươn xứ Nghệ thơm phức mùi hành tăm (củ nén) và nghệ tươi, lươn đồng xào săn chắc không hề tanh, cay nồng ớt bột.",
+    "instructions": "Bước 1: Lươn đồng xát muối, luộc chín gỡ lấy thịt. Xương lươn giã nát lọc lấy nước nấu cháo.\nBước 2: Phi thơm hành tăm với màu điều. Xào thịt lươn với bột nghệ, ớt bột, nước mắm cho săn chắc.\nBước 3: Nấu cháo gạo tẻ với nước xương lươn hầm tới khi mềm nhừ.\nBước 4: Múc cháo nóng ra bát, xúc lươn xào lên trên, rắc nhiều hành tăm phi, rau răm và hành lá.",
+    "difficulty": "Khó",
+    "prepTime": 90,
+    "calories": 400,
+    "imageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800",
+    "tags": "Cháo,Đặc sản,Miền Trung",
+    "ingredients": [
+      { "name": "Lươn đồng", "amount": 500, "unit": "g" },
+      { "name": "Gạo tẻ", "amount": 150, "unit": "g" },
+      { "name": "Hành tăm (Củ nén)", "amount": 50, "unit": "g" },
+      { "name": "Bột nghệ", "amount": 2, "unit": "muỗng" },
+      { "name": "Rau răm", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Miến Lươn Xào",
+    "description": "Sợi miến dong dai trong không bị nát, xào cùng lươn chiên giòn rụm hoặc lươn mềm, giá đỗ, mộc nhĩ và hành tây.",
+    "instructions": "Bước 1: Lươn làm sạch, lọc xương thái sợi. Ướp bột chiên giòn chiên ngập dầu.\nBước 2: Ngâm miến dong cho mềm, cắt khúc vừa ăn, trộn miến với chút dầu ăn và trứng gà.\nBước 3: Phi tỏi, xào mộc nhĩ, hành tây, giá đỗ chín tới rồi trút ra đĩa.\nBước 4: Cho miến vào chảo đảo nhanh tay với xì dầu. Trút rau xào và lươn vào đảo đều 1 phút. Tắt bếp.",
+    "difficulty": "Trung bình",
+    "prepTime": 60,
+    "calories": 450,
+    "imageUrl": "https://images.unsplash.com/photo-1620025750316-0e1ceaa9681d?w=800",
+    "tags": "Món Xào,Miến,Đặc sản",
+    "ingredients": [
+      { "name": "Miến dong", "amount": 200, "unit": "g" },
+      { "name": "Lươn phi lê", "amount": 300, "unit": "g" },
+      { "name": "Giá đỗ", "amount": 100, "unit": "g" },
+      { "name": "Mộc nhĩ", "amount": 50, "unit": "g" },
+      { "name": "Hành tây", "amount": 100, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Nem Cua Bể",
+    "description": "Đặc sản Hải Phòng với nem gói hình vuông độc đáo, vỏ đa nem giòn rụm bao bọc nhân thịt, mộc nhĩ và thịt cua bể.",
+    "instructions": "Bước 1: Trộn thịt nạc vai xay, tôm băm, mộc nhĩ, miến, hành tây, lòng đỏ trứng gà, thịt cua bể.\nBước 2: Thoa bia hoặc dấm lên bánh đa nem cho giòn.\nBước 3: Múc nhân đặt vào giữa bánh đa, gấp 4 mép lại tạo thành hình vuông chằn chặn.\nBước 4: Chiên nem ngập dầu lửa nhỏ cho chín nhân, lửa to lúc lấy ra để vỏ giòn. Cắt làm 4, ăn kèm bún.",
+    "difficulty": "Trung bình",
+    "prepTime": 90,
+    "calories": 600,
+    "imageUrl": "https://images.unsplash.com/photo-1615486171448-4fdcb3cc51fa?w=800",
+    "tags": "Món Khô,Hải sản,Chiên",
+    "ingredients": [
+      { "name": "Thịt cua bể tươi", "amount": 200, "unit": "g" },
+      { "name": "Thịt nạc vai xay", "amount": 300, "unit": "g" },
+      { "name": "Tôm tươi băm", "amount": 150, "unit": "g" },
+      { "name": "Bánh đa nem vuông", "amount": 1, "unit": "tệp" },
+      { "name": "Miến, mộc nhĩ", "amount": 50, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Nem Lụi Huế",
+    "description": "Thịt lợn quết nhuyễn bọc quanh cây sả nướng trên than hồng, cuốn bánh tráng rau sống và chấm nước lèo đậu phộng.",
+    "instructions": "Bước 1: Thịt heo xay nhuyễn quết với giò sống, mỡ, hành tỏi, gia vị. Quết thật dẻo.\nBước 2: Nặn chả bọc quanh gốc sả, nướng than hoa xoay đều tay tới khi xém vàng bóng bẩy.\nBước 3: Làm nước chấm lèo: Xào gan heo băm, thịt băm nhuyễn với mè rang, đậu phộng, tương hột, đun sệt lại.\nBước 4: Trải bánh tráng, xếp khế chua, chuối chát, rau sống, đặt cây nem lụi vào cuộn lại rút que sả ra.",
+    "difficulty": "Trung bình",
+    "prepTime": 90,
+    "calories": 550,
+    "imageUrl": "https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?w=800",
+    "tags": "Đồ Cuốn,Nướng,Miền Trung",
+    "ingredients": [
+      { "name": "Thịt heo xay", "amount": 500, "unit": "g" },
+      { "name": "Cây sả", "amount": 10, "unit": "cây" },
+      { "name": "Gan heo", "amount": 100, "unit": "g" },
+      { "name": "Đậu phộng", "amount": 100, "unit": "g" },
+      { "name": "Bánh tráng", "amount": 300, "unit": "g" }
+    ]
+  },
+  {
+    "title": "Chè Trôi Nước",
+    "description": "Viên trôi nước nếp dẻo quẹo trắng trẻo nhân đậu xanh đánh bùi bùi, tắm trong nước đường gừng vàng óng thơm lừng.",
+    "instructions": "Bước 1: Đậu xanh hấp chín, tán nhuyễn. Sên đậu với đường, vo viên tròn nhỏ làm nhân.\nBước 2: Nhào bột nếp với nước ấm cho dẻo. Bọc nhân đậu xanh vào giữa viên bột nếp, vo tròn kín.\nBước 3: Nấu nước đường thốt nốt với gừng thái chỉ. Luộc viên trôi nước chín nổi lên rồi vớt sang nồi nước đường.\nBước 4: Múc chè ra bát lớn, chan nước cốt dừa đun sánh mịn và rắc mè rang. Ăn ấm rất ngon.",
+    "difficulty": "Dễ",
+    "prepTime": 60,
+    "calories": 420,
+    "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c8a9e9ce?w=800",
+    "tags": "Tráng Miệng,Chè,Ngọt",
+    "ingredients": [
+      { "name": "Bột nếp", "amount": 300, "unit": "g" },
+      { "name": "Đậu xanh", "amount": 150, "unit": "g" },
+      { "name": "Đường thốt nốt", "amount": 200, "unit": "g" },
+      { "name": "Gừng tươi", "amount": 1, "unit": "nhánh" },
+      { "name": "Nước cốt dừa", "amount": 200, "unit": "ml" }
+    ]
+  }
+]
