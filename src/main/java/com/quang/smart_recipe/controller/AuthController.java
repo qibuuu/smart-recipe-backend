@@ -61,4 +61,9 @@ public class AuthController {
         authService.changePassword(request.getOldPassword(), request.getNewPassword());
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/me")
+    public ResponseEntity<AuthResponseDTO> getMyInfo() {
+        return ResponseEntity.ok(authService.getMyInfo());
+    }
 }

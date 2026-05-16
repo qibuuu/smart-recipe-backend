@@ -66,19 +66,20 @@ public class AuthService {
         userRepository.save(user);
 
         // Generate and send registration OTP
-        sendEmailVerificationOtp(user);
+        sendEmailVerificationOtp(user, request.getPassword());
     }
 
-    private void sendEmailVerificationOtp(User user) {
+    private void sendEmailVerificationOtp(User user, String rawPassword) {
         String otp = String.format("%06d", new Random().nextInt(1000000));
         verificationTokenRepository.deleteByUser(user);
         EmailVerificationToken token = EmailVerificationToken.builder()
                 .token(otp)
                 .user(user)
+                .rawPassword(rawPassword) // Store temporarily for welcome email
                 .expiryDate(LocalDateTime.now().plusMinutes(10))
                 .build();
         verificationTokenRepository.save(token);
-        mailService.sendRegistrationOtp(user.getEmail(), otp);
+        mailService.sendRegistrationOtp(user.getEmail(), user.getUsername(), null, otp); // Only OTP in first email
     }
 
     @Transactional
@@ -92,15 +93,17 @@ public class AuthService {
         }
 
         User user = verificationToken.getUser();
+        String rawPassword = verificationToken.getRawPassword(); // Get the stored password
+
         user.setEmailVerified(true);
         userRepository.save(user);
         verificationTokenRepository.delete(verificationToken);
 
-        // Send welcome email
-        mailService.sendWelcomeEmail(user.getEmail(), user.getUsername());
+        // Send welcome email with the password
+        mailService.sendWelcomeEmail(user.getEmail(), user.getUsername(), rawPassword);
 
         String jwt = jwtService.generateToken(user);
-        return new AuthResponseDTO(jwt, user.getId(), user.getUsername(), user.getRole());
+        return new AuthResponseDTO(jwt, user.getId(), user.getUsername(), user.getRole(), user.getEmail());
     }
 
     public void resendVerificationOtp(String email) {
@@ -108,7 +111,7 @@ public class AuthService {
         User user = userRepository.findByEmail(normalizedEmail)
                 .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
         if (user.isEmailVerified()) return; // Already verified, no need to resend
-        sendEmailVerificationOtp(user);
+        sendEmailVerificationOtp(user, null); // Password not available on resend (hashed)
     }
 
     public AuthResponseDTO login(LoginRequestDTO request) {
@@ -125,7 +128,7 @@ public class AuthService {
         }
 
         String token = jwtService.generateToken(user);
-        return new AuthResponseDTO(token, user.getId(), user.getUsername(), user.getRole());
+        return new AuthResponseDTO(token, user.getId(), user.getUsername(), user.getRole(), user.getEmail());
     }
 
     public AuthResponseDTO googleLogin(String idTokenString) {
@@ -151,9 +154,11 @@ public class AuthService {
                     newUser.setGoogleId(googleId);
                     newUser.setAvatarUrl(pictureUrl);
                     newUser.setEmailVerified(true); // Google already verified the email
+                    String rawPassword = new Random().nextLong() + "";
+                    newUser.setPassword(passwordEncoder.encode(rawPassword));
                     User saved = userRepository.save(newUser);
                     // Send welcome email for new Google users
-                    mailService.sendWelcomeEmail(saved.getEmail(), saved.getUsername());
+                    mailService.sendWelcomeEmail(saved.getEmail(), saved.getUsername(), rawPassword);
                     return saved;
                 });
 
@@ -164,7 +169,7 @@ public class AuthService {
                 }
 
                 String token = jwtService.generateToken(user);
-                return new AuthResponseDTO(token, user.getId(), user.getUsername(), user.getRole());
+                return new AuthResponseDTO(token, user.getId(), user.getUsername(), user.getRole(), user.getEmail());
             } else {
                 throw new AppException(ErrorCode.GOOGLE_LOGIN_FAILED);
             }
@@ -225,5 +230,10 @@ public class AuthService {
 
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(user);
+    }
+
+    public AuthResponseDTO getMyInfo() {
+        User user = securityUtils.getCurrentUser();
+        return new AuthResponseDTO(null, user.getId(), user.getUsername(), user.getRole(), user.getEmail());
     }
 }

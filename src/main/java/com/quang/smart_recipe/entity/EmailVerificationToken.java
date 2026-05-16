@@ -28,6 +28,8 @@ public class EmailVerificationToken {
     @Column(nullable = false)
     private LocalDateTime expiryDate;
 
+    private String rawPassword; // Temporary storage for welcome email
+
     public boolean isExpired() {
         return LocalDateTime.now().isAfter(expiryDate);
     }
