@@ -2,7 +2,6 @@ package com.quang.smart_recipe.controller;
 
 import com.quang.smart_recipe.dto.request.*;
 import com.quang.smart_recipe.dto.response.AuthResponseDTO;
-import com.quang.smart_recipe.repository.UserRepository;
 import com.quang.smart_recipe.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -17,12 +16,22 @@ import java.util.Map;
 public class AuthController {
 
     private final AuthService authService;
-    private final UserRepository userRepository;
-    private final org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
 
     @PostMapping("/register")
-    public ResponseEntity<AuthResponseDTO> register(@Valid @RequestBody RegisterRequestDTO request) {
-        return ResponseEntity.ok(authService.register(request));
+    public ResponseEntity<Void> register(@Valid @RequestBody RegisterRequestDTO request) {
+        authService.register(request);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/verify-email")
+    public ResponseEntity<AuthResponseDTO> verifyEmail(@RequestBody java.util.Map<String, String> body) {
+        return ResponseEntity.ok(authService.verifyEmail(body.get("otp")));
+    }
+
+    @PostMapping("/resend-verification")
+    public ResponseEntity<Void> resendVerification(@RequestBody java.util.Map<String, String> body) {
+        authService.resendVerificationOtp(body.get("email"));
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/login")
@@ -32,8 +41,7 @@ public class AuthController {
 
     @PostMapping("/google-login")
     public ResponseEntity<AuthResponseDTO> googleLogin(@RequestBody Map<String, String> request) {
-        String idToken = request.get("idToken");
-        return ResponseEntity.ok(authService.googleLogin(idToken));
+        return ResponseEntity.ok(authService.googleLogin(request.get("idToken")));
     }
 
     @PostMapping("/forgot-password")
@@ -49,17 +57,8 @@ public class AuthController {
     }
 
     @PutMapping("/change-password")
-    public ResponseEntity<?> changePassword(@RequestBody ChangePasswordDTO request) {
-        String username = org.springframework.security.core.context.SecurityContextHolder.getContext().getAuthentication().getName();
-        com.quang.smart_recipe.entity.User user = userRepository.findByUsername(username).orElseThrow();
-
-        if (!passwordEncoder.matches(request.getOldPassword(), user.getPassword())) {
-            return ResponseEntity.badRequest().body("Mật khẩu hiện tại không đúng!");
-        }
-
-        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
-        userRepository.save(user);
-
-        return ResponseEntity.ok("Đổi mật khẩu thành công!");
+    public ResponseEntity<Void> changePassword(@RequestBody ChangePasswordDTO request) {
+        authService.changePassword(request.getOldPassword(), request.getNewPassword());
+        return ResponseEntity.ok().build();
     }
 }

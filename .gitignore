@@ -34,3 +34,6 @@ build/
 
 ### Uploads ###
 uploads/
+
+### Local config with secrets — never commit! ###
+src/main/resources/application-local.yml

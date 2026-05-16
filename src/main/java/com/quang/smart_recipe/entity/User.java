@@ -28,9 +28,12 @@ public class User implements UserDetails { // Thêm: implements UserDetails
 
     @Column(unique = true)
     private String email;
-    private String role; // "USER" hoặc "ADMIN"
+    private String role;
     private String googleId;
     private String avatarUrl;
+
+    @Column(nullable = false, columnDefinition = "TINYINT(1) DEFAULT 0")
+    private boolean emailVerified = false;
 
     // --- CÁC HÀM BẮT BUỘC CỦA SPRING SECURITY ---
 

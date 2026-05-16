@@ -11,6 +11,11 @@ import java.util.List;
 public interface RecipeIngredientRepository extends JpaRepository<RecipeIngredient, Long> {
     List<RecipeIngredient> findByRecipeId(Long recipeId);
 
+    /** Fetches ALL recipe-ingredient links with their ingredient data in ONE query.
+     *  Used by suggestRecipesByIngredients to avoid N+1 problem. */
+    @Query("SELECT ri FROM RecipeIngredient ri JOIN FETCH ri.ingredient JOIN FETCH ri.recipe")
+    List<RecipeIngredient> findAllWithIngredients();
+
     @Modifying
     @Transactional
     @Query("DELETE FROM RecipeIngredient ri WHERE ri.recipe.id = :recipeId")

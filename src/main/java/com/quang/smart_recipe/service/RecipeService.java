@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -88,8 +89,15 @@ public class RecipeService {
                 .map(String::toLowerCase)
                 .collect(Collectors.toList());
 
+        // 1 query to get all recipe-ingredient links (replaces N+1)
+        Map<Long, List<RecipeIngredient>> ingredientsByRecipe = recipeIngredientRepository
+                .findAllWithIngredients()
+                .stream()
+                .collect(Collectors.groupingBy(ri -> ri.getRecipe().getId()));
+
+        // 1 query to get all recipes
         return recipeRepository.findAll().stream()
-                .map(recipe -> buildSuggestion(recipe, normalizedInputs))
+                .map(recipe -> buildSuggestion(recipe, normalizedInputs, ingredientsByRecipe))
                 .filter(dto -> dto != null && dto.getMatchPercentage() > 0)
                 .sorted((a, b) -> Integer.compare(b.getMatchPercentage(), a.getMatchPercentage()))
                 .collect(Collectors.toList());
@@ -201,8 +209,9 @@ public class RecipeService {
         recipeIngredientRepository.saveAll(links);
     }
 
-    private RecipeSuggestionDTO buildSuggestion(Recipe recipe, List<String> normalizedInputs) {
-        List<RecipeIngredient> required = recipeIngredientRepository.findByRecipeId(recipe.getId());
+    private RecipeSuggestionDTO buildSuggestion(Recipe recipe, List<String> normalizedInputs,
+                                                 Map<Long, List<RecipeIngredient>> ingredientsByRecipe) {
+        List<RecipeIngredient> required = ingredientsByRecipe.getOrDefault(recipe.getId(), List.of());
         if (required.isEmpty()) return null;
 
         int matchCount = 0;

@@ -7,13 +7,16 @@ import com.google.api.client.json.gson.GsonFactory;
 import com.quang.smart_recipe.dto.request.LoginRequestDTO;
 import com.quang.smart_recipe.dto.request.RegisterRequestDTO;
 import com.quang.smart_recipe.dto.response.AuthResponseDTO;
+import com.quang.smart_recipe.entity.EmailVerificationToken;
 import com.quang.smart_recipe.entity.PasswordResetToken;
 import com.quang.smart_recipe.entity.User;
 import com.quang.smart_recipe.exception.AppException;
 import com.quang.smart_recipe.exception.ErrorCode;
+import com.quang.smart_recipe.repository.EmailVerificationTokenRepository;
 import com.quang.smart_recipe.repository.PasswordResetTokenRepository;
 import com.quang.smart_recipe.repository.UserRepository;
 import com.quang.smart_recipe.security.JwtService;
+import com.quang.smart_recipe.security.SecurityUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -32,34 +35,80 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordResetTokenRepository tokenRepository;
+    private final EmailVerificationTokenRepository verificationTokenRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     private final MailService mailService;
+    private final SecurityUtils securityUtils;
 
     @Value("${app.google.client-id}")
     private String googleClientId;
 
-    public AuthResponseDTO register(RegisterRequestDTO request) {
+    @Transactional
+    public void register(RegisterRequestDTO request) {
         if (userRepository.existsByUsername(request.getUsername())) {
             throw new AppException(ErrorCode.USERNAME_EXISTED);
         }
-        
+
         String normalizedEmail = request.getEmail().toLowerCase().trim();
         if (userRepository.existsByEmail(normalizedEmail)) {
             throw new AppException(ErrorCode.EMAIL_EXISTED);
         }
 
+        // Save user as unverified
         User user = new User();
         user.setUsername(request.getUsername());
         user.setEmail(normalizedEmail);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setRole("USER");
+        user.setEmailVerified(false);
+        userRepository.save(user);
 
-        User saved = userRepository.save(user);
-        String token = jwtService.generateToken(saved);
+        // Generate and send registration OTP
+        sendEmailVerificationOtp(user);
+    }
 
-        return new AuthResponseDTO(token, saved.getId(), saved.getUsername(), saved.getRole());
+    private void sendEmailVerificationOtp(User user) {
+        String otp = String.format("%06d", new Random().nextInt(1000000));
+        verificationTokenRepository.deleteByUser(user);
+        EmailVerificationToken token = EmailVerificationToken.builder()
+                .token(otp)
+                .user(user)
+                .expiryDate(LocalDateTime.now().plusMinutes(10))
+                .build();
+        verificationTokenRepository.save(token);
+        mailService.sendRegistrationOtp(user.getEmail(), otp);
+    }
+
+    @Transactional
+    public AuthResponseDTO verifyEmail(String otp) {
+        EmailVerificationToken verificationToken = verificationTokenRepository.findByToken(otp)
+                .orElseThrow(() -> new AppException(ErrorCode.INVALID_OTP));
+
+        if (verificationToken.isExpired()) {
+            verificationTokenRepository.delete(verificationToken);
+            throw new AppException(ErrorCode.INVALID_OTP);
+        }
+
+        User user = verificationToken.getUser();
+        user.setEmailVerified(true);
+        userRepository.save(user);
+        verificationTokenRepository.delete(verificationToken);
+
+        // Send welcome email
+        mailService.sendWelcomeEmail(user.getEmail(), user.getUsername());
+
+        String jwt = jwtService.generateToken(user);
+        return new AuthResponseDTO(jwt, user.getId(), user.getUsername(), user.getRole());
+    }
+
+    public void resendVerificationOtp(String email) {
+        String normalizedEmail = email.toLowerCase().trim();
+        User user = userRepository.findByEmail(normalizedEmail)
+                .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+        if (user.isEmailVerified()) return; // Already verified, no need to resend
+        sendEmailVerificationOtp(user);
     }
 
     public AuthResponseDTO login(LoginRequestDTO request) {
@@ -69,8 +118,13 @@ public class AuthService {
 
         User user = userRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
-        String token = jwtService.generateToken(user);
 
+        // Block login if email not verified
+        if (!user.isEmailVerified()) {
+            throw new AppException(ErrorCode.EMAIL_NOT_VERIFIED);
+        }
+
+        String token = jwtService.generateToken(user);
         return new AuthResponseDTO(token, user.getId(), user.getUsername(), user.getRole());
     }
 
@@ -92,12 +146,22 @@ public class AuthService {
                     User newUser = new User();
                     newUser.setEmail(email);
                     newUser.setUsername(email.split("@")[0] + "_" + new Random().nextInt(1000));
-                    newUser.setPassword(passwordEncoder.encode(new Random().nextLong() + "")); // Random pass
+                    newUser.setPassword(passwordEncoder.encode(new Random().nextLong() + ""));
                     newUser.setRole("USER");
                     newUser.setGoogleId(googleId);
                     newUser.setAvatarUrl(pictureUrl);
-                    return userRepository.save(newUser);
+                    newUser.setEmailVerified(true); // Google already verified the email
+                    User saved = userRepository.save(newUser);
+                    // Send welcome email for new Google users
+                    mailService.sendWelcomeEmail(saved.getEmail(), saved.getUsername());
+                    return saved;
                 });
+
+                // Ensure existing users are also marked verified
+                if (!user.isEmailVerified()) {
+                    user.setEmailVerified(true);
+                    userRepository.save(user);
+                }
 
                 String token = jwtService.generateToken(user);
                 return new AuthResponseDTO(token, user.getId(), user.getUsername(), user.getRole());
@@ -149,5 +213,17 @@ public class AuthService {
         userRepository.save(user);
 
         tokenRepository.delete(resetToken);
+    }
+
+    @Transactional
+    public void changePassword(String oldPassword, String newPassword) {
+        User user = securityUtils.getCurrentUser();
+
+        if (!passwordEncoder.matches(oldPassword, user.getPassword())) {
+            throw new AppException(ErrorCode.WRONG_PASSWORD);
+        }
+
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
     }
 }

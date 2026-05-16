@@ -9,6 +9,8 @@ public enum ErrorCode {
     USERNAME_EXISTED(HttpStatus.CONFLICT, "Tên đăng nhập đã tồn tại"),
     EMAIL_EXISTED(HttpStatus.CONFLICT, "Email này đã được sử dụng"),
     INVALID_CREDENTIALS(HttpStatus.UNAUTHORIZED, "Sai tên đăng nhập hoặc mật khẩu"),
+    WRONG_PASSWORD(HttpStatus.BAD_REQUEST, "Mật khẩu hiện tại không đúng"),
+    EMAIL_NOT_VERIFIED(HttpStatus.FORBIDDEN, "Tài khoản chưa được xác minh email. Vui lòng kiểm tra hộp thư."),
     GOOGLE_LOGIN_FAILED(HttpStatus.UNAUTHORIZED, "Đăng nhập bằng Google thất bại"),
     INVALID_OTP(HttpStatus.BAD_REQUEST, "Mã OTP không hợp lệ hoặc đã hết hạn"),
 

@@ -38,4 +38,10 @@ public class UserFridgeController {
     public ResponseEntity<?> suggestRecipes() {
         return ResponseEntity.ok(userFridgeService.suggestRecipes());
     }
+
+    @DeleteMapping
+    public ResponseEntity<Void> clearAllFridge() {
+        userFridgeService.clearAll();
+        return ResponseEntity.noContent().build();
+    }
 }

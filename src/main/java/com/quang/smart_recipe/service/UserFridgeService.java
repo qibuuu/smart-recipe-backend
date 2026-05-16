@@ -63,6 +63,10 @@ public class UserFridgeService {
         userFridgeRepository.deleteById(id);
     }
 
+    public void clearAll() {
+        userFridgeRepository.deleteByUserId(securityUtils.getCurrentUserId());
+    }
+
     public List<RecipeSuggestionDTO> suggestRecipes() {
         List<UserFridge> fridgeItems = userFridgeRepository.findByUserId(securityUtils.getCurrentUserId());
         if (fridgeItems.isEmpty()) return List.of();
