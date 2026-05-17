@@ -29,7 +29,7 @@ public class SecurityConfig {
      * Dev default: http://localhost:5173
      * Production: set ALLOWED_ORIGINS=https://your-app.vercel.app in environment variables.
      */
-    @Value("${app.cors.allowed-origins:http://localhost:5173,http://localhost:5174}")
+    @Value("${app.cors.allowed-origins:http://localhost:5173,http://localhost:5174,https://smart-fridge-fe.vercel.app}")
     private String allowedOriginsRaw;
 
     @Bean
