@@ -3,7 +3,7 @@ spring:
     name: smart-fridge
 
   datasource:
-    url: jdbc:mysql://localhost:3306/smart_recipe_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:smart_recipe_db}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: ${DB_USERNAME:root}
     password: ${DB_PASSWORD:123456}
 
