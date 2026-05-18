@@ -8,7 +8,6 @@ import com.quang.smart_recipe.repository.IngredientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,9 +20,7 @@ public class IngredientService {
     // requestDTO -> Entity
     public IngredientResponseDTO createIngredient(IngredientRequestDTO request) {
         Ingredient newEntity = ingredientMapper.toEntity(request);
-
         Ingredient savedEntity = ingredientRepository.save(newEntity);
-
         return ingredientMapper.toResponseDTO(savedEntity);
     }
 
@@ -32,5 +29,24 @@ public class IngredientService {
                 .stream()
                 .map(ingredientMapper::toResponseDTO)
                 .collect(Collectors.toList());
+    }
+
+    public IngredientResponseDTO updateIngredient(Long id, IngredientRequestDTO request) {
+        Ingredient ingredient = ingredientRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Ingredient not found"));
+        
+        if (request.getName() != null) ingredient.setName(request.getName());
+        if (request.getUnit() != null) ingredient.setUnit(request.getUnit());
+        if (request.getImageUrl() != null) ingredient.setImageUrl(request.getImageUrl());
+        
+        Ingredient saved = ingredientRepository.save(ingredient);
+        return ingredientMapper.toResponseDTO(saved);
+    }
+
+    public void deleteIngredient(Long id) {
+        if (!ingredientRepository.existsById(id)) {
+            throw new RuntimeException("Ingredient not found");
+        }
+        ingredientRepository.deleteById(id);
     }
 }

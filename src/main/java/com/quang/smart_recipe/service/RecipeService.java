@@ -85,18 +85,30 @@ public class RecipeService {
     // ── Suggest ───────────────────────────────────────────────
 
     public List<RecipeSuggestionDTO> suggestRecipesByIngredients(List<String> inputIngredients) {
+        if (inputIngredients == null || inputIngredients.isEmpty()) {
+            return List.of();
+        }
+
         List<String> normalizedInputs = inputIngredients.stream()
                 .map(String::toLowerCase)
                 .collect(Collectors.toList());
 
-        // 1 query to get all recipe-ingredient links (replaces N+1)
+        // 1. Fetch only recipe IDs that contain at least one matched ingredient
+        List<Long> matchedRecipeIds = recipeIngredientRepository.findRecipeIdsByIngredientNames(normalizedInputs);
+        if (matchedRecipeIds.isEmpty()) {
+            return List.of();
+        }
+
+        // 2. Fetch only the recipe-ingredient links for these matched recipes
         Map<Long, List<RecipeIngredient>> ingredientsByRecipe = recipeIngredientRepository
-                .findAllWithIngredients()
+                .findByRecipeIdIn(matchedRecipeIds)
                 .stream()
                 .collect(Collectors.groupingBy(ri -> ri.getRecipe().getId()));
 
-        // 1 query to get all recipes
-        return recipeRepository.findAll().stream()
+        // 3. Fetch only the matched recipes details
+        List<Recipe> matchedRecipes = recipeRepository.findAllById(matchedRecipeIds);
+
+        return matchedRecipes.stream()
                 .map(recipe -> buildSuggestion(recipe, normalizedInputs, ingredientsByRecipe))
                 .filter(dto -> dto != null && dto.getMatchPercentage() > 0)
                 .sorted((a, b) -> Integer.compare(b.getMatchPercentage(), a.getMatchPercentage()))
@@ -194,18 +206,43 @@ public class RecipeService {
     private void saveIngredients(Recipe recipe, List<RecipeIngredientRequestDTO> ingredients) {
         if (ingredients == null || ingredients.isEmpty()) return;
 
-        List<RecipeIngredient> links = new ArrayList<>();
+        // 1. Gather all ingredient names, trimmed and lowercase
+        java.util.Set<String> names = ingredients.stream()
+                .map(i -> i.getIngredientName().trim().toLowerCase())
+                .collect(Collectors.toSet());
+
+        // 2. Fetch existing ingredients in bulk (1 query replaces N queries)
+        List<Ingredient> existingList = ingredientRepository.findByNameInIgnoreCase(names);
+        Map<String, Ingredient> existingMap = existingList.stream()
+                .collect(Collectors.toMap(i -> i.getName().toLowerCase(), i -> i, (a, b) -> a));
+
+        // 3. Find which ingredients are new and need to be created
+        List<Ingredient> newIngredients = new ArrayList<>();
         for (RecipeIngredientRequestDTO req : ingredients) {
             String name = req.getIngredientName().trim();
-            Ingredient ingredient = ingredientRepository.findByNameIgnoreCase(name)
-                    .orElseGet(() -> ingredientRepository.save(new Ingredient(null, name, req.getUnit(), null)));
+            String lowerName = name.toLowerCase();
+            if (!existingMap.containsKey(lowerName)) {
+                Ingredient newIng = new Ingredient(null, name, req.getUnit(), null);
+                newIngredients.add(newIng);
+                existingMap.put(lowerName, newIng); // Add to map to prevent duplicates in current save batch
+            }
+        }
 
+        // 4. Batch-save new ingredients (1 insert query replaces N insert queries)
+        if (!newIngredients.isEmpty()) {
+            ingredientRepository.saveAll(newIngredients);
+        }
+
+        // 5. Connect and batch-save the intermediate links
+        List<RecipeIngredient> links = ingredients.stream().map(req -> {
+            Ingredient ing = existingMap.get(req.getIngredientName().trim().toLowerCase());
             RecipeIngredient ri = new RecipeIngredient();
             ri.setRecipe(recipe);
-            ri.setIngredient(ingredient);
+            ri.setIngredient(ing);
             ri.setAmount(req.getAmount());
-            links.add(ri);
-        }
+            return ri;
+        }).collect(Collectors.toList());
+
         recipeIngredientRepository.saveAll(links);
     }
 

@@ -27,7 +27,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
-import java.util.Random;
+import java.security.SecureRandom;
+import com.quang.smart_recipe.security.EncryptionUtils;
 
 @Service
 @RequiredArgsConstructor
@@ -44,6 +45,11 @@ public class AuthService {
 
     @Value("${app.google.client-id}")
     private String googleClientId;
+
+    @Value("${app.jwt.secret}")
+    private String aesSecretKey;
+
+    private final SecureRandom secureRandom = new SecureRandom();
 
     @Transactional
     public void register(RegisterRequestDTO request) {
@@ -70,12 +76,15 @@ public class AuthService {
     }
 
     private void sendEmailVerificationOtp(User user, String rawPassword) {
-        String otp = String.format("%06d", new Random().nextInt(1000000));
+        String otp = String.format("%06d", secureRandom.nextInt(1000000));
         verificationTokenRepository.deleteByUser(user);
+        
+        String encrypted = rawPassword != null ? EncryptionUtils.encrypt(rawPassword, aesSecretKey) : null;
+
         EmailVerificationToken token = EmailVerificationToken.builder()
                 .token(otp)
                 .user(user)
-                .rawPassword(rawPassword) // Store temporarily for welcome email
+                .encryptedPassword(encrypted) // Securely store AES-256 encrypted password
                 .expiryDate(LocalDateTime.now().plusMinutes(10))
                 .build();
         verificationTokenRepository.save(token);
@@ -93,7 +102,7 @@ public class AuthService {
         }
 
         User user = verificationToken.getUser();
-        String rawPassword = verificationToken.getRawPassword(); // Get the stored password
+        String rawPassword = EncryptionUtils.decrypt(verificationToken.getEncryptedPassword(), aesSecretKey); // Decrypt on OTP validation
 
         user.setEmailVerified(true);
         userRepository.save(user);
@@ -148,13 +157,13 @@ public class AuthService {
                 User user = userRepository.findByEmail(email).orElseGet(() -> {
                     User newUser = new User();
                     newUser.setEmail(email);
-                    newUser.setUsername(email.split("@")[0] + "_" + new Random().nextInt(1000));
-                    newUser.setPassword(passwordEncoder.encode(new Random().nextLong() + ""));
+                    newUser.setUsername(email.split("@")[0] + "_" + secureRandom.nextInt(1000));
+                    newUser.setPassword(passwordEncoder.encode(secureRandom.nextLong() + ""));
                     newUser.setRole("USER");
                     newUser.setGoogleId(googleId);
                     newUser.setAvatarUrl(pictureUrl);
                     newUser.setEmailVerified(true); // Google already verified the email
-                    String rawPassword = new Random().nextLong() + "";
+                    String rawPassword = secureRandom.nextLong() + "";
                     newUser.setPassword(passwordEncoder.encode(rawPassword));
                     User saved = userRepository.save(newUser);
                     // Send welcome email for new Google users
@@ -185,7 +194,7 @@ public class AuthService {
                 .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
 
         // Generate 6-digit OTP
-        String otp = String.format("%06d", new Random().nextInt(1000000));
+        String otp = String.format("%06d", secureRandom.nextInt(1000000));
 
         // Delete old token if exists
         tokenRepository.deleteByUser(user);

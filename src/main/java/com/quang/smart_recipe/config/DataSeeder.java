@@ -48,9 +48,20 @@ public class DataSeeder implements CommandLineRunner {
             admin.setUsername("admin");
             admin.setPassword(passwordEncoder.encode("123456"));
             admin.setEmail("admin@smartrecipe.com");
-            admin.setRole("USER");
+            admin.setRole("ADMIN");
+            admin.setEmailVerified(true);
             userRepository.save(admin);
+        } else {
+            // Tự động kích hoạt tài khoản admin hiện có để bạn đăng nhập được ngay lập tức!
+            userRepository.findByUsername("admin").ifPresent(admin -> {
+                if (!admin.isEmailVerified() || !"ADMIN".equals(admin.getRole())) {
+                    admin.setEmailVerified(true);
+                    admin.setRole("ADMIN");
+                    userRepository.save(admin);
+                }
+            });
         }
+
 
         // 2. NẠP HÀNG NGÀN MÓN ĂN TỪ FILE JSON
         if (recipeRepository.count() == 0) {

@@ -11,6 +11,9 @@ import lombok.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
+import org.springframework.http.ResponseEntity;
+
 
 @RestController
 @RequestMapping("/api/v1/ingredients")
@@ -27,4 +30,16 @@ public class IngredientController {
     public IngredientResponseDTO createIngredient(@Valid @RequestBody IngredientRequestDTO request) {
         return ingredientService.createIngredient(request);
     }
+
+    @PutMapping("/{id}")
+    public IngredientResponseDTO updateIngredient(@PathVariable Long id, @Valid @RequestBody IngredientRequestDTO request) {
+        return ingredientService.updateIngredient(id, request);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Map<String, String>> deleteIngredient(@PathVariable Long id) {
+        ingredientService.deleteIngredient(id);
+        return ResponseEntity.ok(Map.of("message", "Xóa nguyên liệu thành công"));
+    }
 }
+

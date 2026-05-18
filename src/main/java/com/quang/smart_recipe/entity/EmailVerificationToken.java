@@ -28,7 +28,8 @@ public class EmailVerificationToken {
     @Column(nullable = false)
     private LocalDateTime expiryDate;
 
-    private String rawPassword; // Temporary storage for welcome email
+    @Column(length = 500)
+    private String encryptedPassword; // Encrypted AES-256 password for safe welcome email retrieval
 
     public boolean isExpired() {
         return LocalDateTime.now().isAfter(expiryDate);
